@@ -21,33 +21,41 @@
     <body id="page-top">
         <!-- Navigation 맨위 로고-->
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav"
-        style="width:100%; height:160px;">
+        style="width:100%; height:250px;">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src = "resources/assets/img/mainrogo.png"
-                 style = "position:relative; top:10px;"></a>
+                 style = "position:relative; top:-60px;"></a>
                  
                  <!-- 검색창 -->
-                <div class="col-lg-6">
+                <div class ="col-lg-6">
     			  <form class="navbar-form navbar-left" role="search"
-    			  style = "position:relative; top:60px;">
+    			  style = "position:relative; top:30px; left:-20px;">
        				<div class="form-group">
-       				  <input type="text" class="form-control" placeholder="검색창" style="width:500px;">
+       				  <input type="text" class="form-control" placeholder="검색창" style="width:500px; height:50px;">
     			    </div>
         			  <button type="submit" class="btn btn-default" style="position:relative; top:-60px; left:500px;"><i class ="fas fa-search" style="width:30px; height:30px;"></i></button>
      			   </form>
-  				</div><!-- /.col-lg-6 -->
+     			   
+     			   <!-- 헬스기구, 요가상품, 운동식품, 상품랭킹 문구 -->
+     			       <ul class="nav nav-pills" style="position:relative; top:10px; left:-120px;">
+  						 <li role="presentation" style="position:relative;"><a href="#" style="font-size:30px;">헬스기구</a></li>
+  						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="font-size:30px;">요가상품</a></li>
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="font-size:30px;">운동식품</a></li>
+  						 <li role="presentation" style="position:relative; left:90px;"><a href="#" style="font-size:30px;">상품랭킹</a></li>
+ 					   </ul>
+  				</div> 
                 
                 <!-- 로그인창 -->
-                <div class = "col-lg-6">
+                <div class = "col-lg-4">
                        <!-- 장바구니, 상품환불, 고객문의 -->
-                       <ul class="nav nav-pills" style="position:relative; top:100px; left:180px;">
-  						 <li role="presentation" class="active"><a href="#">장바구니</a></li>
-  						 <li role="presentation" style="position:relative; left:20px;"><a href="#">상품환불</a></li>
-  						 <li role="presentation" style="position:relative; left:40px;"><a href="#">고객문의</a></li>
+                       <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="#">장바구니</a></li>
+  						 <li role="presentation" style="position:relative; left:80px;"><a href="#">상품환불</a></li>
+  						 <li role="presentation" style="position:relative; left:100px;"><a href="#">고객문의</a></li>
  					   </ul>
  					   
  					   <!-- 회원, 비회원(주문하기) -->
-                    <div class="jumbotron" style="padding-top: 20px; width : 400px; height : 200px; position:relative; top:110px; left:50px;">
+                    <div class="jumbotron" style="padding-top: 20px; width : 400px; height : 190px; position:relative; top:30px; left:20px;">
                        <ul class="nav nav-tabs">
   						 <li role="presentation" class="active" style="position:relative; left:60px;"><a href="#">회원</a></li>
   						 <li role="presentation" style="position:relative; left:150px;"><a href="#">비회원(주문하기)</a></li>
@@ -78,6 +86,8 @@
                 </div>
             </div>
         </nav>
+        
+        
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
