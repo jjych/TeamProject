@@ -10,4 +10,14 @@ public class MyController {
 	public String main() {
 		return "main";
 	}
+	
+	@RequestMapping("/ManRanking")
+	public String ManRanking() {
+		return "ManRanking";
+	}
+	
+	@RequestMapping("/WomanRanking")
+	public String WomanRanking() {
+		return "WomanRanking";
+	}
 }

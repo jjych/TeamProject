@@ -41,7 +41,16 @@
   						 <li role="presentation" style="position:relative;"><a href="#" style="font-size:30px;">헬스기구</a></li>
   						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="font-size:30px;">요가상품</a></li>
   						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="font-size:30px;">운동식품</a></li>
-  						 <li role="presentation" style="position:relative; left:90px;"><a href="#" style="font-size:30px;">상품랭킹</a></li>
+  						 <!-- <li role="presentation" style="position:relative; left:90px;"><a href="#" style="font-size:30px;">상품랭킹</a></li> -->
+ 					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="font-size:30px;"
+                        data-toggle="dropdown"> 상품랭킹 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="http://localhost:8088/ex/ManRanking" style="color:#000000;">남여랭킹</a></li>
+                           <li><a href="#" style="color:#000000;">헬스기구 랭킹</a></li>
+                           <li><a href="#" style="color:#000000;">요가용품 랭킹</a></li>
+                           <li><a href="#" style="color:#000000;">건강식품 랭킹</a></li>
+                        </ul>
+                         </li>
  					   </ul>
   				</div> 
                 
