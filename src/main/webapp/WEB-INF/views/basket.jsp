@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav"
         style="width:100%; height:250px;">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src = "resources/assets/img/mainrogo.png"
+                <a class="navbar-brand js-scroll-trigger" href="main"><img src = "resources/assets/img/mainrogo.png"
                  style = "position:relative; top:-60px;"></a>
                  
                  <!-- 검색창 -->
@@ -95,87 +95,50 @@
                 </div>
             </div>
         </nav>
-            
-        <!--브랜드 이미지 로고 -->
-        <header class="bg-white text-white text-center">
-           <div class="container d-flex align-items-center flex-column">
-              <div class="divider-custom divider-light">
-                   <a class="navbar-brand" href="#">
-                       <img alt="picture" style="width:1500px;height:500px;" src="resources/assets/img/sex.png">
-                   </a>
-              </div>
-           </div>
-        </header>
         
-        <!-- 추천상품-->
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
+        <!-- 장바구니-->
+        <section class="page-section portfolio">
+            <div class="container" style="width:1431px; height:650px;">
                 <!-- 이번달 추천상품 문구 및 밑줄표시-->
-                <h2 class="page-section-heading text-uppercase text-secondary mb-0">이번달 추천상품</h2>
-                <!-- Icon Divider-->
+                <h2 class="page-section-heading text-uppercase text-secondary mb-0">장바구니</h2>
+                <!-- 밑줄 -->
                 <div class="divider-custom" style="display:block;">
                     <hr style="background-color:black;">
                 </div>
                 
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- 추천상품1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/f2.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 프로틴(초콜릿맛)</h4>
-                           <h5> 가격 : 8,000원</h5>
-                    </div>
-                    <!-- 추천상품2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/YogaImg/y1.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 요가링</h4>
-                           <h5> 가격 : 11,000원</h5>
-                    </div>
-                    <!-- 추천상품3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/YogaImg/y2.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 돌기봉</h4>
-                           <h5> 가격 : 4,000원</h5>
-                    </div>
-                    <!-- 추천상품4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/HealthImg/h1.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 전신헬스기구</h4>
-                           <h5> 가격 : 1,370,000원</h5>
-                    </div>
-                    <!-- 추천상품5-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/f1.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 이솔레이트</h4>
-                           <h5> 가격 : 12,000원</h5>
-                    </div>
-                    <!-- 추천상품6-->
-                    <div class="col-md-6 col-lg-4">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/f3.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 에이치프로틴(초콜릿맛)</h4>
-                           <h5> 가격 : 13,000원</h5>
-                    </div>
+                <div class="row">
+                    <table class="table table-striped" style="text-align: center; border:1px solid #dddddd">
+                       <thead>
+                         <tr>
+                            <th style="background-color: #eeeeee; text-align: center;">번호</th>
+                            <th style="background-color: #eeeeee; text-align: center;">제목</th>
+                            <th style="background-color: #eeeeee; text-align: center;">작성자</th>
+                            <th style="background-color: #eeeeee; text-align: center;">작성일</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                            <td>하이</td>
+                            <td>헬로</td>
+                            <td>방가</td>
+                            <td>모시모시</td>
+                         </tr>    
+                       </tbody>
+                   </table>    
+               </div>
+             </div>
+        </section>
+        <div class="container">
+                <!-- 밑줄 -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
                 </div>
-            </div>
-        </section>        
+                <p style="text-align:right;">
+                <a href="#" class="btn btn-primary pull-right">전체선택</a>
+                <a href="#" class="btn btn-primary pull-right">선택삭제</a>
+                <a href="#" class="btn btn-primary pull-right">결제하기</a>
+                </p>
+        </div>        
         
         <!-- Copyright Section(맨밑 하단)-->
         <div class="copyright py-4 text-center text-white">

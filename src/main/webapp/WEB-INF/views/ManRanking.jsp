@@ -38,11 +38,11 @@
      			   
      			   <!-- 헬스기구, 요가상품, 운동식품, 상품랭킹 문구 -->
      			       <ul class="nav nav-pills" style="position:relative; top:10px; left:-120px;">
-  						 <li role="presentation" style="position:relative;"><a href="#" style="font-size:30px;">헬스기구</a></li>
-  						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="font-size:30px;">요가상품</a></li>
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="font-size:30px;">운동식품</a></li>
+  						 <li role="presentation" style="position:relative;"><a href="#" style="text-decoration:none; font-size:30px;">헬스기구</a></li>
+  						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="text-decoration:none; font-size:30px;">요가상품</a></li>
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="text-decoration:none; font-size:30px;">운동식품</a></li>
   						 <!-- <li role="presentation" style="position:relative; left:90px;"><a href="#" style="font-size:30px;">상품랭킹</a></li> -->
- 					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="font-size:30px;"
+ 					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="text-decoration:none; font-size:30px;"
                         data-toggle="dropdown"> 상품랭킹 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                            <li><a href="#" style="color:#000000;">남여랭킹</a></li>
@@ -107,8 +107,8 @@
               </div>
               <!-- 판매랭킹,남여랭킹 선택부분 -->
               <div class="btn-group" role="group" aria-label="...">
-                  <button type="button" class="btn btn-default" style="background-color:#b9f6ca;"><a href = "#" style="color:black;">판매랭킹</a></button>
-                  <button type="button" class="btn btn-default" style ="background-color:#00e676;"><a href = "http://localhost:8088/ex/ManRanking" style="color:black;">남여랭킹</a></button>
+                  <button type="button" class="btn btn-default" style="background-color:#b9f6ca;"><a href = "#" style="text-decoration:none; color:black;">판매랭킹</a></button>
+                  <button type="button" class="btn btn-default" style ="background-color:#00e676;"><a href = "http://localhost:8088/ex/ManRanking" style="text-decoration:none; color:black;">남여랭킹</a></button>
               </div>
               <!-- 남성회원 여성회원 이미지 및 클릭시 이동  -->
               <div class="btn-group" role="group" aria-label="...">
@@ -118,6 +118,9 @@
               <p style = "color:black; font-size:12px;">남성회원&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;여성회원</p>
            </div>
         </header>
+        <!-- 남성회원순위 라벨 -->
+        <br><br>
+        <center><h1>남성회원순위</h1></center>
         
         <!-- 상품랭킹 -->
         <section class="page-section portfolio">
@@ -224,7 +227,7 @@
         
         <!-- Copyright Section(맨밑 하단)-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small><a href ="#">회사소개</a>｜ <a href ="#">이용약관</a> ｜ <a href ="#">개인정보처리방침</a><br>
+            <div class="container"><small><a href ="#" style="text-decoration:none;">회사소개</a>｜ <a href ="#" style="text-decoration:none;">이용약관</a> ｜ <a href ="#" style="text-decoration:none;">개인정보처리방침</a><br>
             (주)꾸준한거북이 ｜대표 : 김규헌 ｜ 개인정보보호책임자 : 원태연 ｜ 사업자등록번호: 111-22-34567 사업자정보 확인> ｜ 02-159-8948<br>
                      경기도 의정부시 서부로 545 경민대학교 ｜ FAX. 02-1234-5678 ｜ Email. steadyturtle@kyungmin.ac.kr</small>
             </div>

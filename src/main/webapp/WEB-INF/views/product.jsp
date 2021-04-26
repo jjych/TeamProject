@@ -17,13 +17,18 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="resources/css/styles.css" rel="stylesheet" />
+        <script type = "text/javascript">
+           function check(){
+        	   alert('장바구니에 담으시겠나요?');
+           }
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation 맨위 로고-->
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav"
         style="width:100%; height:250px;">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src = "resources/assets/img/mainrogo.png"
+                <a class="navbar-brand js-scroll-trigger" href="http://localhost:8088/ex/main"><img src = "resources/assets/img/mainrogo.png"
                  style = "position:relative; top:-60px;"></a>
                  
                  <!-- 검색창 -->
@@ -45,12 +50,13 @@
  					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="text-decoration:none; font-size:30px;"
                         data-toggle="dropdown"> 상품랭킹 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                           <li><a href="http://localhost:8088/ex/ManRanking" style="color:#000000;">남여랭킹</a></li>
+                           <li><a href="#" style="color:#000000;">남여랭킹</a></li>
                            <li><a href="#" style="color:#000000;">헬스기구 랭킹</a></li>
                            <li><a href="#" style="color:#000000;">요가용품 랭킹</a></li>
                            <li><a href="#" style="color:#000000;">건강식품 랭킹</a></li>
-                        </ul>
-                         </li>
+                        </ul></li>
+ 					     
+ 					   
  					   </ul>
   				</div> 
                 
@@ -95,87 +101,105 @@
                 </div>
             </div>
         </nav>
-            
-        <!--브랜드 이미지 로고 -->
-        <header class="bg-white text-white text-center">
-           <div class="container d-flex align-items-center flex-column">
-              <div class="divider-custom divider-light">
-                   <a class="navbar-brand" href="#">
-                       <img alt="picture" style="width:1500px;height:500px;" src="resources/assets/img/sex.png">
-                   </a>
-              </div>
-           </div>
-        </header>
         
-        <!-- 추천상품-->
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- 이번달 추천상품 문구 및 밑줄표시-->
-                <h2 class="page-section-heading text-uppercase text-secondary mb-0">이번달 추천상품</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom" style="display:block;">
-                    <hr style="background-color:black;">
-                </div>
-                
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- 추천상품1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/f2.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 프로틴(초콜릿맛)</h4>
-                           <h5> 가격 : 8,000원</h5>
+        <!-- 상품보기 -->
+        <section class="page-section portfolio">
+        <form name = "product" action="./processAddProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
+            <div class = "container" style="background-color:#bbdefb;">
+                <div class ="row">
+                    <div class = "col-md-5">
+                      <br><br>
+                      <img src = "./resources/assets/HealthImg/h1.jpg" style="width:80%; height:70%;">
                     </div>
-                    <!-- 추천상품2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/YogaImg/y1.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 요가링</h4>
-                           <h5> 가격 : 11,000원</h5>
-                    </div>
-                    <!-- 추천상품3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/YogaImg/y2.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 돌기봉</h4>
-                           <h5> 가격 : 4,000원</h5>
-                    </div>
-                    <!-- 추천상품4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/HealthImg/h1.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 전신헬스기구</h4>
-                           <h5> 가격 : 1,370,000원</h5>
-                    </div>
-                    <!-- 추천상품5-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/f1.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 이솔레이트</h4>
-                           <h5> 가격 : 12,000원</h5>
-                    </div>
-                    <!-- 추천상품6-->
-                    <div class="col-md-6 col-lg-4">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/f3.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 에이치프로틴(초콜릿맛)</h4>
-                           <h5> 가격 : 13,000원</h5>
-                    </div>
-                </div>
-            </div>
-        </section>        
+                    <div class = "col-md-6">
+                       <br>
+                       <h2><center>상체튼튼철봉</center></h2>
+                       <hr>
+                       <p><b style = "font-size:20px;">판매가 : </b>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <!-- db연동 -->
+                       <b style = "font-size:20px;">150,000 원</b>
+                       </p>
+                       <hr>
+                       <p><b style = "font-size:20px;">판매량 : </b>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <!-- db연동 -->
+                       <b style = "font-size:20px;">288,444 개</b>
+                       </p>
+                       <hr>
+                       <p><b style = "font-size:20px;">배송방법 : </b>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <!-- db연동 -->
+                       <b style = "font-size:20px; color:red;">무료배송</b>
+                       </p>
+                       <hr>
+                       <p><b style = "font-size:20px;">추가혜택 : </b>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <!-- db연동 -->
+                       <b style = "font-size:20px; color:blue;">1 % 적립</b>
+                       </p>
+                       <hr>
+                       <p><b style = "font-size:20px;">구매갯수 : </b>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <!-- db연동 -->
+                       <b style = "font-size:20px;"><input type ="number" class = "input" style ="width:60px; height:30px;" value = "1"> 개</b>
+                       </p>
+                       <hr>
+                       <!-- db연동 -->
+                       <h4 style="text-align:right;">총 결제금액 : 150,000원</h4>
+                       <hr>
+                       <!-- 뒤로가기 버튼클릭시 -->
+                       <p style="text-align:right;"><a href="#" class="btn btn-secondary">뒤로가기</a>
+                       <!-- 장바구니 버튼클릭시 -->
+                       <a href="http://localhost:8088/ex/basket" class="btn btn-info">장바구니</a>
+                       <!-- 바로구매 버튼클릭시 -->
+                       <input type = "submit" class="btn btn-info" value="바로구매" onclick = "CheckAddProduct()">
+                       </p>
+                     </div>
+                 </div>
+            </div>   
+            </form>  
+        </section>
         
         <!-- Copyright Section(맨밑 하단)-->
         <div class="copyright py-4 text-center text-white">
