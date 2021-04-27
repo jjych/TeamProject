@@ -35,4 +35,10 @@ public class MyController {
 	public String basket() {
 		return "basket";
 	}
+	
+	// 주문조회
+	@RequestMapping("/JumunSearch")
+	public String JumunSearch() {
+		return "JumunSearch";
+	}
 }

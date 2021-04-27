@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav"
         style="width:100%; height:250px;">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="http://localhost:8088/ex/main"><img src = "resources/assets/img/mainrogo.png"
+                <a class="navbar-brand js-scroll-trigger" href="main"><img src = "resources/assets/img/mainrogo.png"
                  style = "position:relative; top:-60px;"></a>
                  
                  <!-- 검색창 -->
@@ -41,11 +41,9 @@
   						 <li role="presentation" style="position:relative;"><a href="#" style="text-decoration:none; font-size:30px;">헬스기구</a></li>
   						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="text-decoration:none; font-size:30px;">요가상품</a></li>
   						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="text-decoration:none; font-size:30px;">운동식품</a></li>
-  						 <!-- <li role="presentation" style="position:relative; left:90px;"><a href="#" style="font-size:30px;">상품랭킹</a></li> -->
- 					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="text-decoration:none; font-size:30px;"
-                        data-toggle="dropdown"> 상품랭킹 <span class="caret"></span></a>
+ 					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="text-decoration:none; font-size:30px;" data-toggle="dropdown"> 상품랭킹 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                           <li><a href="#" style="color:#000000;">남여랭킹</a></li>
+                           <li><a href="ManRanking" style="color:#000000;">남여랭킹</a></li>
                            <li><a href="#" style="color:#000000;">헬스기구 랭킹</a></li>
                            <li><a href="#" style="color:#000000;">요가용품 랭킹</a></li>
                            <li><a href="#" style="color:#000000;">건강식품 랭킹</a></li>
@@ -59,7 +57,7 @@
                 <div class = "col-lg-4">
                        <!-- 장바구니, 상품환불, 고객문의 -->
                        <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#">장바구니</a></li>
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="basket">장바구니</a></li>
   						 <li role="presentation" style="position:relative; left:80px;"><a href="#">상품환불</a></li>
   						 <li role="presentation" style="position:relative; left:100px;"><a href="#">고객문의</a></li>
  					   </ul>
@@ -108,12 +106,12 @@
               <!-- 판매랭킹,남여랭킹 선택부분 -->
               <div class="btn-group" role="group" aria-label="...">
                   <button type="button" class="btn btn-default" style="background-color:#b9f6ca;"><a href = "#" style="text-decoration:none; color:black;">판매랭킹</a></button>
-                  <button type="button" class="btn btn-default" style ="background-color:#00e676;"><a href = "http://localhost:8088/ex/ManRanking" style="text-decoration:none; color:black;">남여랭킹</a></button>
+                  <button type="button" class="btn btn-default" style ="background-color:#00e676;"><a href = "ManRanking" style="text-decoration:none; color:black;">남여랭킹</a></button>
               </div>
               <!-- 남성회원 여성회원 이미지 및 클릭시 이동  -->
               <div class="btn-group" role="group" aria-label="...">
-                <a href="http://localhost:8088/ex/ManRanking"><img src = "resources/assets/RankingImg/man.png" style="width:70px; height:50px;"></a>
-                <a href="http://localhost:8088/ex/WomanRanking"><img src = "resources/assets/RankingImg/woman.png" style="width:70px; height:50px;"></a>
+                <a href="ManRanking"><img src = "resources/assets/RankingImg/man.png" style="width:70px; height:50px;"></a>
+                <a href="WomanRanking"><img src = "resources/assets/RankingImg/woman.png" style="width:70px; height:50px;"></a>
               </div>
               <p style = "color:black; font-size:12px;">남성회원&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;여성회원</p>
            </div>

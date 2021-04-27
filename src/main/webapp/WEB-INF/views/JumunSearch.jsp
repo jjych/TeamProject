@@ -94,44 +94,57 @@
             </div>
         </nav>
         
-        <!-- 장바구니-->
+        <!-- 주문조회-->
         <section class="page-section portfolio">
-            <div class="container" style="width:1431px; height:650px;">
+            <div class="container" style="width:1431px; height:1000px;">
                 <!-- 이번달 추천상품 문구 및 밑줄표시-->
-                <h2 class="page-section-heading text-uppercase text-secondary mb-0">장바구니</h2>
+                <h2 class="page-section-heading text-uppercase text-secondary mb-0">주문조회</h2>
                 <!-- 밑줄 -->
                 <div class="divider-custom" style="display:block;">
                     <hr style="background-color:black;">
                 </div>
+                <!-- 1주일 -->
+                <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" class="btn btn-default" style="background-color:#a5d6a7;"><a href = "#" style="text-decoration:none; color:black;">1주일</a></button>
+                </div>
+                <!-- 1개월 -->
+                <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" class="btn btn-default" style="background-color:#a5d6a7;"><a href = "#" style="text-decoration:none; color:black;">1개월</a></button>
+                </div>
+                <!-- 3개월 -->
+                <div class="btn-group" role="group" aria-label="...">  
+                  <button type="button" class="btn btn-default" style="background-color:#a5d6a7;"><a href = "#" style="text-decoration:none; color:black;">3개월</a></button>
+                </div>
+                <!-- 6개월 -->
+                <div class="btn-group" role="group" aria-label="...">  
+                  <button type="button" class="btn btn-default" style="background-color:#a5d6a7;"><a href = "#" style="text-decoration:none; color:black;">6개월</a></button>
+                </div>
+                <!-- 12개월 -->
+                <div class="btn-group" role="group" aria-label="...">  
+                  <button type="button" class="btn btn-default" style="background-color:#a5d6a7;"><a href = "#" style="text-decoration:none; color:black;">12개월</a></button>
+                </div>
+                <p><b>기간 2021.04.28 ~ 2021.5.5</b><p>
                 
-                <!-- 장바구니에 담긴 상품 -->
                 <div class="row">
                    <table style="width:100%">
                      <tr style="height:100px;">
                         <th style="width:200px; height:43px;"><center><a href = "#"><img class="img-fluid" src="resources/assets/FoodImg/f2.jpg"  style="width:120px; height: 100px;"alt="" /></a></center>
                         <th style="width:300px; height:43px;"><center><h3>프로틴(초코맛)</h3></center>
-                        <th style="width:250px; height:43px;"><center><input type ="number" class = "input" style ="width:60px; height:30px;" value = "1"></center>
                         <th style="width:250px; height:43px;"><center><h3>8,000원</h3></center>
-                        <th style="width:150px; height:43px;"><center><input type ="checkbox" id = "chkbox" style="width:25px; height:25px;"></input></center></th> 
+                        <th style="width:250px; height:43px;"><center><h3>1 개</h3></center>
+                        <th style="width:150px; height:43px;"><center><h3 style="color:orange;">배송준비</h3></center></th> 
                      </tr>
                    </table>    
                </div>
              </div>
         </section>
+        
         <div class="container">
                 <!-- 밑줄 -->
                 <div class="divider-custom" style="display:block;">
                     <hr style="background-color:black;">
                 </div>
-                <p style="text-align:right;">
-                <!-- 전체선택 -->
-                <label class="btn btn-primary pull-right" style="position:relative; top:4px;"for="chkbox">전체선택</label>
-                <!-- 선택삭제 -->
-                <a href="#" class="btn btn-primary pull-right">선택삭제</a>
-                <!-- 결제하기 -->
-                <a href="#" class="btn btn-primary pull-right">결제하기</a>
-                </p>
-        </div>        
+        </div>
         
         <!-- Copyright Section(맨밑 하단)-->
         <div class="copyright py-4 text-center text-white">
