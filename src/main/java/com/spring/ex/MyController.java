@@ -41,4 +41,10 @@ public class MyController {
 	public String JumunSearch() {
 		return "JumunSearch";
 	}
+	
+	// 결제창
+	@RequestMapping("CashOn")
+	public String CashOn() {
+		return "CashOn";
+	}
 }

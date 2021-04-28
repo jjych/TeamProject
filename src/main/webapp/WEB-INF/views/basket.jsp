@@ -97,7 +97,7 @@
         <!-- 장바구니-->
         <section class="page-section portfolio">
             <div class="container" style="width:1431px; height:650px;">
-                <!-- 이번달 추천상품 문구 및 밑줄표시-->
+                <!-- 장바구니 문구 및 밑줄표시-->
                 <h2 class="page-section-heading text-uppercase text-secondary mb-0">장바구니</h2>
                 <!-- 밑줄 -->
                 <div class="divider-custom" style="display:block;">
@@ -129,7 +129,7 @@
                 <!-- 선택삭제 -->
                 <a href="#" class="btn btn-primary pull-right">선택삭제</a>
                 <!-- 결제하기 -->
-                <a href="#" class="btn btn-primary pull-right">결제하기</a>
+                <a href="CashOn" class="btn btn-primary pull-right">결제하기</a>
                 </p>
         </div>        
         

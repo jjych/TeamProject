@@ -97,7 +97,7 @@
         <!-- 주문조회-->
         <section class="page-section portfolio">
             <div class="container" style="width:1431px; height:1000px;">
-                <!-- 이번달 추천상품 문구 및 밑줄표시-->
+                <!-- 주문조회 문구 및 밑줄표시-->
                 <h2 class="page-section-heading text-uppercase text-secondary mb-0">주문조회</h2>
                 <!-- 밑줄 -->
                 <div class="divider-custom" style="display:block;">
@@ -125,14 +125,43 @@
                 </div>
                 <p><b>기간 2021.04.28 ~ 2021.5.5</b><p>
                 
-                <div class="row">
-                   <table style="width:100%">
+                <div class="row">     
+                   <!-- 주문일자, 주문번호, 주문상세>> 및 밑줄 -->
+                   <div class="divider-custom" style="display:block; width:1140px; height:30px;">
+                      <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       2021.04.29
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        주문번호 111111584 
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <a href="#" style="text-decoration:none; color:black;">주문상세  ></a></b></p>
+                      <hr class="divider-custom" style="background-color:black;">
+                   </div>
+                   <!-- 주문내역 출력 -->
+                   <table style="width:100%;">
                      <tr style="height:100px;">
-                        <th style="width:200px; height:43px;"><center><a href = "#"><img class="img-fluid" src="resources/assets/FoodImg/f2.jpg"  style="width:120px; height: 100px;"alt="" /></a></center>
-                        <th style="width:300px; height:43px;"><center><h3>프로틴(초코맛)</h3></center>
-                        <th style="width:250px; height:43px;"><center><h3>8,000원</h3></center>
-                        <th style="width:250px; height:43px;"><center><h3>1 개</h3></center>
-                        <th style="width:150px; height:43px;"><center><h3 style="color:orange;">배송준비</h3></center></th> 
+                        <th style="width:200px; height:35px;"><center><a href = "#"><img class="img-fluid" src="resources/assets/FoodImg/f2.jpg"  style="width:120px; height: 100px;"alt="" /></a></center>
+                        <th style="width:300px; height:35px;"><center><h4>프로틴(초코맛)</h4></center>
+                        <th style="width:250px; height:35px;"><center><h4>8,000원</h4></center>
+                        <th style="width:250px; height:35px;"><center><h4>1 개</h4></center>
+                        <th style="width:150px; height:35px;"><center><h4 style="color:orange;">배송준비</h4></center></th> 
                      </tr>
                    </table>    
                </div>
