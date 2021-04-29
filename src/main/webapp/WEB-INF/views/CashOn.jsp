@@ -232,6 +232,72 @@
                 <h3 style="color:black;">결제방법</h3>
                 <hr>
            </div>
+           
+           <!-- 결제방법 (신용카드, 휴대폰결제, Toss) -->
+           <div class="container">
+             <table style="width:100%">
+  				<tr style="color:black;">
+    				<th style="font-size:20px;"><a href ="#" style="color:black; text-decoration:none;">신용카드</a></th>
+    				<th style="font-size:20px;"><a href ="#" style="color:black; text-decoration:none;">휴대폰결제</a></th> 
+    				<th style="font-size:20px;"><a href ="#" style="color:black; text-decoration:none;">Toss</a></th>
+  				</tr>
+			 </table>
+			 <hr>
+			 <br>
+			 
+			 <!-- 카드및 할부선택 -->
+			 <div class = "container" style="background-color:#e3f2fd;">
+                <div class ="row">
+                    <div class = "col-md-5">
+                    <br>
+                      <h4 style="color:black;">신용카드 결제</h4>
+                    </div>
+                    <div class = "col-md-6">
+                       <br>
+                       <p><b style = "font-size:20px; color:black;">카드선택</b>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <!-- db연동 -->
+                       <select style="width:220px;  height:30px;">
+                        	<option value = "">[필수] 카드사를 선택하세요.</option>
+                        	<option value = "KB">KB국민</option>
+                        	<option value = "IBK">IBK기업</option>
+                        	<option value = "SH">신한</option>
+                        	<option value = "SA">삼성</option>
+                        	<option value = "BC">BC</option>
+                        	<option value = "NH">농협</option>
+                    	</select>
+                       </p>
+                       <hr>
+                       <p><b style = "font-size:20px; color:black;">할부선택</b>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <!-- db연동 -->
+                       <select style="width:220px;  height:30px;">
+                        	<option value = "">일시불</option>
+                        	<option value = "">1개월 할부</option>
+                        	<option value = "">3개월 할부</option>
+                        	<option value = "">6개월 할부</option>
+                        	<option value = "">12개월 할부</option>
+                    	</select>
+                       </p>
+                       <hr>
+                       <!-- db연동 -->
+                       <p class = "check" style="color:black; text-align:right; font-size:15px;">
+                    		<input type ="checkbox">
+                    		<span>구매조건 및 이용약관에 동의하며,<br>결제를 진행합니다.</span>
+                	   </p>
+                	   <hr>
+                	   <!-- 결제하기 버튼 -->
+                	   <center><input type = "submit" class="btn" style="width:250px; height:50px; background-color:#757575; color:white;" value="결제하기"></center>
+                	   <br>
+                     </div>
+                  </div>
+                 </div>
+                 <br><br>
+			</div>
         </header>
         
         <!-- Copyright Section(맨밑 하단)-->
