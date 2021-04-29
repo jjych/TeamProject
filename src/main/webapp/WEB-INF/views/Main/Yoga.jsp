@@ -17,11 +17,6 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="resources/css/styles.css" rel="stylesheet" />
-        <script type = "text/javascript">
-           function check(){
-        	   alert('장바구니에 담으시겠나요?');
-           }
-        </script>
     </head>
     <body id="page-top">
         <!-- Navigation 맨위 로고-->
@@ -124,109 +119,82 @@
                     </div>
                 </div>
         </nav>
-        
-        <!-- 상품보기 -->
-        <section class="page-section portfolio">
-        <form name = "product" action="./processAddProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
-            <div class = "container" style="background-color:#bbdefb;">
-                <div class ="row">
-                    <div class = "col-md-5">
-                      <br><br>
-                      <img src = "./resources/assets/HealthImg/h1.jpg" style="width:80%; height:70%;">
+            
+
+         
+        <!-- 요가상품-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- 요가상품 문구 -->
+                <h2 class="page-section-heading text-uppercase text-secondary mb-0">요가상품</h2>
+                <!-- 밑줄-->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+                
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- 상품1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <a href = "#">
+                        <img class="img-fluid" src="resources/assets/YogaImg/y1.jpg"  style="width:270px; height: 200px;"alt="" />
+                        </a>   
+                           <br><br>
+                           <h4> 상품명 : 요가 써클링</h4>
+                           <h5> 가격 : 8,000원</h5>
                     </div>
-                    <div class = "col-md-6">
-                       <br>
-                       <h2><center>하체튼튼철봉</center></h2>
-                       <hr>
-                       <p><b style = "font-size:20px;">판매가 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;">150,000 원</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">판매량 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;">288,444 개</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">배송방법 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px; color:red;">무료배송</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">추가혜택 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px; color:blue;">1 % 적립</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">구매갯수 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;"><input type ="number" class = "input" style ="width:60px; height:30px;" value = "1"> 개</b>
-                       </p>
-                       <hr>
-                       <!-- db연동 -->
-                       <h4 style="text-align:right;">총 결제금액 : 150,000원</h4>
-                       <hr>
-                       <!-- 뒤로가기 버튼클릭시 -->
-                       <p style="text-align:right;"><a href="#" class="btn btn-secondary">뒤로가기</a>
-                       <!-- 장바구니 버튼클릭시 -->
-                       <a href="basket" class="btn btn-info">장바구니</a>
-                       <!-- 바로구매 버튼클릭시 -->
-                       <input type = "submit" class="btn btn-info" value="바로구매">
-                       </p>
-                     </div>
-                 </div>
-            </div>   
-            </form>  
-        </section>
+                    <!-- 상품2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <a href = "#">
+                        <img class="img-fluid" src="resources/assets/YogaImg/y2.jpg"  style="width:270px; height: 200px;"alt="" />
+                        </a>   
+                           <br><br>
+                           <h4> 상품명 : 마사지 볼</h4>
+                           <h5> 가격 : 11,000원</h5>
+                    </div>
+                    <!-- 상품3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <a href = "#">
+                        <img class="img-fluid" src="resources/assets/YogaImg/YogaClothes.PNG"  style="width:270px; height: 200px;"alt="" />
+                        </a>   
+                           <br><br>
+                           <h4> 상품명 : 요가복</h4>
+                           <h5> 가격 : 4,000원</h5>
+                    </div>
+                    <!-- 상품4-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <a href = "#">
+                        <img class="img-fluid" src="resources/assets/YogaImg/YogaFoamBlur.PNG"  style="width:270px; height: 200px;"alt="" />
+                        </a>   
+                           <br><br>
+                           <h4> 상품명 : 요가폼블러</h4>
+                           <h5> 가격 : 1,370,000원</h5>
+                    </div>
+                    <!-- 상품5-->
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <a href = "#">
+                        <img class="img-fluid" src="resources/assets/YogaImg/YogaMat.PNG"  style="width:270px; height: 200px;"alt="" />
+                        </a>   
+                           <br><br>
+                           <h4> 상품명 : 요가메트</h4>
+                           <h5> 가격 : 12,000원</h5>
+                    </div>
+                    <!-- 상품-->
+                    <div class="col-md-6 col-lg-4">
+                        <a href = "#">
+                        <img class="img-fluid" src="resources/assets/YogaImg/YogaClothes.PNG"  style="width:270px; height: 200px;"alt="" />
+                        </a>   
+                           <br><br>
+                           <h4> 상품명 : 요가옷</h4>
+                           <h5> 가격 : 13,000원</h5>
+                    </div>
+                </div>
+            </div>
+        </section>   
         
         <!-- Copyright Section(맨밑 하단)-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small><a href ="#" style="text-decoration:none;">회사소개</a>｜ <a href ="#" style="text-decoration:none;">이용약관</a> ｜ <a href ="#" style="text-decoration:none;">개인정보처리방침</a><br>
+            <div class="container"><small><a href ="#">회사소개</a>｜ <a href ="#">이용약관</a> ｜ <a href ="#">개인정보처리방침</a><br>
             (주)꾸준한거북이 ｜대표 : 김규헌 ｜ 개인정보보호책임자 : 원태연 ｜ 사업자등록번호: 111-22-34567 사업자정보 확인> ｜ 02-159-8948<br>
                      경기도 의정부시 서부로 545 경민대학교 ｜ FAX. 02-1234-5678 ｜ Email. steadyturtle@kyungmin.ac.kr</small>
             </div>

@@ -17,11 +17,6 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="resources/css/styles.css" rel="stylesheet" />
-        <script type = "text/javascript">
-           function check(){
-        	   alert('장바구니에 담으시겠나요?');
-           }
-        </script>
     </head>
     <body id="page-top">
         <!-- Navigation 맨위 로고-->
@@ -124,105 +119,53 @@
                     </div>
                 </div>
         </nav>
-        
-        <!-- 상품보기 -->
-        <section class="page-section portfolio">
-        <form name = "product" action="./processAddProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
-            <div class = "container" style="background-color:#bbdefb;">
-                <div class ="row">
-                    <div class = "col-md-5">
-                      <br><br>
-                      <img src = "./resources/assets/HealthImg/h1.jpg" style="width:80%; height:70%;">
-                    </div>
-                    <div class = "col-md-6">
-                       <br>
-                       <h2><center>하체튼튼철봉</center></h2>
-                       <hr>
-                       <p><b style = "font-size:20px;">판매가 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;">150,000 원</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">판매량 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;">288,444 개</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">배송방법 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px; color:red;">무료배송</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">추가혜택 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px; color:blue;">1 % 적립</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">구매갯수 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;"><input type ="number" class = "input" style ="width:60px; height:30px;" value = "1"> 개</b>
-                       </p>
-                       <hr>
-                       <!-- db연동 -->
-                       <h4 style="text-align:right;">총 결제금액 : 150,000원</h4>
-                       <hr>
-                       <!-- 뒤로가기 버튼클릭시 -->
-                       <p style="text-align:right;"><a href="#" class="btn btn-secondary">뒤로가기</a>
-                       <!-- 장바구니 버튼클릭시 -->
-                       <a href="basket" class="btn btn-info">장바구니</a>
-                       <!-- 바로구매 버튼클릭시 -->
-                       <input type = "submit" class="btn btn-info" value="바로구매">
-                       </p>
-                     </div>
-                 </div>
-            </div>   
-            </form>  
-        </section>
+            
+    	<!-- 아이디 비밀번호 찾기 -->
+		<section class="navbar navbar-expand-xl" style="width: 100%; height: 700px; background:#e3f2fd;">
+		    <!-- 아이디 찾기 -->
+			<div class="container">
+				<div class="col-lg-6">
+					<h1 style="position: relative; top: -30px; left: 400px;">아이디 찾기</h1>
+					<!-- 아이디 찾기 폼 -->
+					<form method="post" action="loginAction.jsp" style="position: relative; top: 10px; left: 300px;">
+					    <!-- 이름 입력란 -->
+						<div class="form-group" style="position: relative; top: 1px;">
+						이름 : <input type="text" class="form-control" placeholder="입력해주세요" name="userName" maxlength="20" style="width: 250px; height: 40px; position: relative; left: 80px; top: -30px;">
+						</div>
+						<!-- 전화번호 입력란 -->
+						<div class="form-group" style="position: relative; top: -30px;">
+						전화번호 : <input type="text" class="form-control" placeholder="입력해주세요" name="userNumber" maxlength="20" style="width: 250px; height: 40px; position: relative; left: 80px; top: -30px;">
+						</div>
+						<!-- 확인버튼 -->
+						<input type="submit" class="btn btn-primary form-control" value="확인" style="width: 150px; height: 40px; position: relative; top: -30px; left: 130px;">
+					</form>
+				</div>
+			</div>
+			<br><br><br>
+			<!-- 비밀번호 찾기 -->
+			<div class="container">
+				<div class="col-lg-6">
+					<h1 style="position: relative; top: -30px; left: 200px;">비밀번호 찾기</h1>
+					<!-- 비밀번호 찾기 폼 -->
+					<form method="post" action="loginAction.jsp" style="position: relative; top: 10px; left: 100px;">
+					    <!-- 아이디 입력란 -->
+						<div class="form-group" style="position: relative; top: 1px;">
+							아이디 : <input type="text" class="form-control" placeholder="입력해주세요" name="userID" maxlength="20" style="width: 250px; height: 40px; position: relative; left: 80px; top: -30px;">
+						</div>
+						<!-- 이름 입력란 -->
+						<div class="form-group" style="position: relative; top: -30px;">
+							이름 : <input type="text" class="form-control" placeholder="입력해주세요" name="userName" maxlength="20" style="width: 250px; height: 40px; position: relative; left: 80px; top: -30px;">
+						</div>
+						<!-- 이메일 입력란 -->
+						<div class="form-group" style="position: relative; top: -55px;">
+						이메일 : <input type="text" class="form-control" placeholder="입력해주세요" name="userNumber" maxlength="20" style="width: 250px; height: 40px; position: relative; left: 80px; top: -30px;">
+						</div>
+						<!-- 확인버튼 -->
+						<input type="submit" class="btn btn-primary form-control" value="확인" style="width: 150px; height: 40px; position: relative; top: -70px; left: 130px;">
+					</form>
+				</div>
+			</div>
+		</section>
         
         <!-- Copyright Section(맨밑 하단)-->
         <div class="copyright py-4 text-center text-white">

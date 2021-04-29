@@ -20,16 +20,13 @@
     </head>
     <body id="page-top">
         <!-- Navigation 맨위 로고-->
-        <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav"
-        style="width:100%; height:250px;">
+        <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width:100%; height:250px;">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="main"><img src = "resources/assets/img/mainrogo.png"
-                 style = "position:relative; top:-60px;"></a>
+                <a class="navbar-brand js-scroll-trigger" href="main"><img src = "resources/assets/img/mainrogo.png" style = "position:relative; top:-60px;"></a>
                  
                  <!-- 검색창 -->
                 <div class ="col-lg-6">
-    			  <form class="navbar-form navbar-left" role="search"
-    			  style = "position:relative; top:30px; left:-20px;">
+    			  <form class="navbar-form navbar-left" role="search" style = "position:relative; top:30px; left:-20px;">
        				<div class="form-group">
        				  <input type="text" class="form-control" placeholder="검색창" style="width:500px; height:50px;">
     			    </div>
@@ -38,15 +35,15 @@
      			   
      			   <!-- 헬스기구, 요가상품, 운동식품, 상품랭킹 문구 -->
      			       <ul class="nav nav-pills" style="position:relative; top:10px; left:-120px;">
-  						 <li role="presentation" style="position:relative;"><a href="#" style="text-decoration:none; font-size:30px;">헬스기구</a></li>
-  						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="text-decoration:none; font-size:30px;">요가상품</a></li>
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="text-decoration:none; font-size:30px;">운동식품</a></li>
+  						 <li role="presentation" style="position:relative;"><a href="Health" style="text-decoration:none; font-size:30px;">헬스기구</a></li>
+  						 <li role="presentation" style="position:relative; left:30px;"><a href="Yoga" style="text-decoration:none; font-size:30px;">요가상품</a></li>
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="Food" style="text-decoration:none; font-size:30px;">운동식품</a></li>
  					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="text-decoration:none; font-size:30px;" data-toggle="dropdown"> 상품랭킹 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                            <li><a href="ManRanking" style="color:#000000;">남여랭킹</a></li>
-                           <li><a href="#" style="color:#000000;">헬스기구 랭킹</a></li>
-                           <li><a href="#" style="color:#000000;">요가용품 랭킹</a></li>
-                           <li><a href="#" style="color:#000000;">건강식품 랭킹</a></li>
+                           <li><a href="HealthRanking" style="color:#000000;">헬스기구 랭킹</a></li>
+                           <li><a href="YogaRanking" style="color:#000000;">요가용품 랭킹</a></li>
+                           <li><a href="FoodRanking" style="color:#000000;">건강식품 랭킹</a></li>
                         </ul>
                          </li>
  					   </ul>
@@ -62,36 +59,65 @@
  					   </ul>
  					   
  					   <!-- 회원, 비회원(주문하기) -->
-                    <div class="jumbotron" style="padding-top: 20px; width : 400px; height : 190px; position:relative; top:30px; left:20px;">
-                       <ul class="nav nav-tabs">
-  						 <li role="presentation" class="active" style="position:relative; left:60px;"><a href="#">회원</a></li>
-  						 <li role="presentation" style="position:relative; left:150px;"><a href="#">비회원(주문하기)</a></li>
- 					   </ul>
- 					   <br>
- 					   
- 					   <!-- 아이디, 비밀번호 입력후 로그인버튼 이벤트 -->
-               		   <form method ="post" action ="loginAction.jsp">
-                 		 <div class="form-group" style="position:relative; top:1px;">
-                      		I D : <input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20"
-                      		   style="width:200px; height: 40px; position:relative; left:40px;top:-30px;">
-                 		 </div>
-                 		 <div class="form-group" style="position:relative; top:-30px;">
-                      		PW : <input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20"
-                  	  	     style="width:200px; height: 40px; position:relative; left:40px; top:-30px;">
-                 		 </div>
-                  		    <input type="submit" class="btn btn-primary form-control" value="로그인"
-                  		    style="width:80px; height:80px; position:relative; top:-160px; left:250px;">
-              		   </form> 
-              		   
-              		   <!-- 아이디, 비밀번호찾기 ,회원가입 -->
-              		   <ul class="nav nav-pills" style="position:relative; top:-150px; left:30px;">
-  						 <li role="presentation" class="active"><a href="#">아이디 ·</a></li>
-  						 <li role="presentation"><a href="#">비밀번호 찾기</a></li>
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#">회원가입</a></li>
- 					   </ul>
-                	</div>
+ 					   <div class="jumbotron" style="padding-top: 20px; width: 400px; height: 190px; position: relative; top: 30px; left: 20px;">
+					     <ul class="nav nav-tabs">
+							<li class="nav-item in active" role="presentation" style="position: relative; left: 60px;">
+								<a href="#login" data-toggle="tab" data-load="true">회원</a>
+							</li>
+							<li class="nav-item" role="presentation" style="position: relative; left: 150px;">
+								<a href="#nLogin" data-toggle="tab" data-load="false">비회원(주문하기)</a>
+							</li>
+						 </ul>
+ 					     <br>
+ 					     
+              		   <!-- 회원 ,비회원(주문하기) 탭창 클릭시 변화 (로그인폼) -->
+              		   <div class="tab-content">
+						<div class="tab-pane fade show active" id="login">
+							<!-- 아이디, 비밀번호 입력후 로그인버튼 이벤트 -->
+							<form method="post" action="loginAction.jsp">
+							    <!-- 아이디입력 -->
+								<div class="form-group" style="position: relative; top: 1px;">
+									I D : <input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
+								</div>
+								<!-- 비밀번호입력 -->
+								<div class="form-group" style="position: relative; top: -30px;">
+									PW : <input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
+								</div>
+								<!-- 로그인버튼 -->
+								<input type="submit" class="btn btn-primary form-control" value="로그인" style="width: 100px; height: 80px; position: relative; top: -160px; left: 250px;">
+							</form>
+							
+							<!-- 아이디, 비밀번호찾기 ,회원가입 -->
+              		   		<ul class="nav nav-pills" style="position:relative; top:-150px; left:30px;">
+  						 		<li role="presentation"><a href="idSearch">아이디 ·</a></li>
+  						 		<li role="presentation"><a href="idSearch">비밀번호 찾기</a></li>
+  							 	<li role="presentation" style="position:relative; left:60px;"><a href="join">회원가입</a></li>
+ 					  		</ul>
+						</div>
+						
+						<!-- 회원 ,비회원(주문하기) 탭창 클릭시 변화 (비회원 주문조회폼) -->
+						<div class="tab-pane fade" id="nLogin">
+							<!-- 이름, 전화번호 입력후 배송조회버튼 이벤트 -->
+							<form method="post" action="loginAction.jsp">
+							    <!-- 이름 입력 -->
+								<div class="form-group" style="position: relative; top: 1px;">
+									이름 <input type="text" class="form-control" placeholder="입력해주세요" name="userName" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
+								</div>
+								<!-- 전화번호 입력 -->
+								<div class="form-group" style="position: relative; top: -30px;">
+									P.H.<input type="text" class="form-control" placeholder="입력해주세요" name="userNumber" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
+								</div>
+								<!-- 배송조회 버튼 -->
+								<input type="submit" class="btn btn-primary form-control" value="배송조회" style="width: 100px; height: 80px; position: relative; top: -160px; left: 250px;">
+							</form>
+							<!-- 회원가입 -->
+              		   		<ul class="nav nav-pills" style="position:relative; top:-150px; left:200px;">
+  						 		<li role="presentation" style="position:relative; left:60px;"><a href="join">회원가입</a></li>
+ 					   		</ul>
+						</div>
+                	  </div>
+                    </div>
                 </div>
-            </div>
         </nav>
         
         <!-- 장바구니-->

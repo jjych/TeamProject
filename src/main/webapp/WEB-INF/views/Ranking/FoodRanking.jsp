@@ -17,11 +17,6 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="resources/css/styles.css" rel="stylesheet" />
-        <script type = "text/javascript">
-           function check(){
-        	   alert('장바구니에 담으시겠나요?');
-           }
-        </script>
     </head>
     <body id="page-top">
         <!-- Navigation 맨위 로고-->
@@ -124,109 +119,140 @@
                     </div>
                 </div>
         </nav>
+            
+        <!-- 상품랭킹 헤드부분 -->
+        <header class="bg-white text-white text-center">
+           <div class="container d-flex align-items-center flex-column">
+               <!-- 상품랭킹 라벨 -->
+              <div class="divider-custom divider-light" style="width:1092px; height:66px;">
+                  <br><br><br><br>  
+                  <h1 style = "color:black;">상품랭킹</h1>
+              </div>
+              <!-- 판매랭킹,남여랭킹 선택부분 -->
+              <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" class="btn btn-default" style="background-color:#00e676;"><a href = "HealthRanking" style="text-decoration:none; color:black;">판매랭킹</a></button>
+                  <button type="button" class="btn btn-default" style ="background-color:#b9f6ca;"><a href = "ManRanking" style="text-decoration:none; color:black;">남여랭킹</a></button>
+              </div>
+              <!-- 음식,헬스,요가 이미지 및 클릭시 이동  -->
+              <div class="btn-group" role="group" aria-label="...">
+                <a href="FoodRanking"><img src = "resources/assets/RankingImg/Food.png" style="width:70px; height:50px;"></a>
+                <a href="HealthRanking"><img src = "resources/assets/RankingImg/Health.png" style="width:70px; height:50px;"></a>
+                <a href="YogaRanking"><img src = "resources/assets/RankingImg/Yoga.png" style="width:70px; height:50px;"></a>
+              </div>
+              <p style = "color:black; font-size:17px;">음식&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;헬스&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;요가</p>
+           </div>
+        </header>
         
-        <!-- 상품보기 -->
+        <!-- 건강식품순위 라벨 -->
+        <br><br>
+        <center><h1>건강식품순위</h1></center>
+        
+        <!-- 상품랭킹 -->
         <section class="page-section portfolio">
-        <form name = "product" action="./processAddProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
-            <div class = "container" style="background-color:#bbdefb;">
-                <div class ="row">
-                    <div class = "col-md-5">
-                      <br><br>
-                      <img src = "./resources/assets/HealthImg/h1.jpg" style="width:80%; height:70%;">
-                    </div>
-                    <div class = "col-md-6">
-                       <br>
-                       <h2><center>하체튼튼철봉</center></h2>
-                       <hr>
-                       <p><b style = "font-size:20px;">판매가 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;">150,000 원</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">판매량 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;">288,444 개</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">배송방법 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px; color:red;">무료배송</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">추가혜택 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px; color:blue;">1 % 적립</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">구매갯수 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;"><input type ="number" class = "input" style ="width:60px; height:30px;" value = "1"> 개</b>
-                       </p>
-                       <hr>
-                       <!-- db연동 -->
-                       <h4 style="text-align:right;">총 결제금액 : 150,000원</h4>
-                       <hr>
-                       <!-- 뒤로가기 버튼클릭시 -->
-                       <p style="text-align:right;"><a href="#" class="btn btn-secondary">뒤로가기</a>
-                       <!-- 장바구니 버튼클릭시 -->
-                       <a href="basket" class="btn btn-info">장바구니</a>
-                       <!-- 바로구매 버튼클릭시 -->
-                       <input type = "submit" class="btn btn-info" value="바로구매">
-                       </p>
-                     </div>
-                 </div>
-            </div>   
-            </form>  
+            <div class="container">
+            <!-- 고정바(순위,상품명,가격,마일리지,배송) 라벨-->
+               <table style="width:100%">
+                  <tr>
+                     <th style="width:200px; height:43px;"><center><h3>순위</h3></center></th>
+                     <th style="width:170px; height:43px;"><center></center></th>
+                     <th style="width:200px; height:43px;"><center><h3>상품명</h3></center></th> 
+                     <th style="width:200px; height:43px;"><center><h3>가격</h3></center></th>
+                     <th style="width:200px; height:43px;"><center><h3>마일리지</h3></center></th>
+                     <th style="width:250px; height:43px;"><center><h3>배송</h3></center></th>
+                   </tr>
+                </table>
+                <!-- 밑줄 -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+                
+                
+                <!-- 상품 랭킹 1~5위 -->
+                <!-- 상품랭킹1위-->
+                <table style="width:100%">
+                   <tr style="height:100px;">
+                     <th style="width:150px; height:43px;"><center><img class="img-fluid" src="resources/assets/RankingImg/first.png"  style="width:70px; height: 50px;"alt="" /></center></th>
+                     <th style="width:150px; height:43px;"><center><a href = "#"><img class="img-fluid" src="resources/assets/FoodImg/ChickenBreast.PNG"  style="width:120px; height: 100px;"alt="" /></a></center>
+                     <th style="width:200px; height:43px;"><center><h3>닭가슴살 스테이크</h3></center>
+                     <th style="width:150px; height:43px;"><center><h3>가격</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>1%</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>무료배송</h3></center></th> 
+                   </tr>
+                </table>
+                <!-- 밑줄  -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+                
+                <!-- 상품랭킹2위 -->
+                <table style="width:100%">
+                   <tr style="height:100px;">
+                     <th style="width:150px; height:43px;"><center><img class="img-fluid" src="resources/assets/RankingImg/second.png"  style="width:70px; height: 50px;"alt="" /></center></th>
+                     <th style="width:150px; height:43px;"><center><a href = "#"><img class="img-fluid" src="resources/assets/FoodImg/f1.jpg"  style="width:120px; height: 100px;"alt="" /></a></center>
+                     <th style="width:200px; height:43px;"><center><h3>웨이트 프로틴</h3></center>
+                     <th style="width:150px; height:43px;"><center><h3>가격</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>1%</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>무료배송</h3></center></th> 
+                   </tr>
+                </table>
+                <!-- 밑줄 -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+                
+                <!-- 상품랭킹3위 -->
+                <table style="width:100%">
+                   <tr style="height:100px;">
+                     <th style="width:150px; height:43px;"><center><img class="img-fluid" src="resources/assets/RankingImg/third.png"  style="width:70px; height: 50px;"alt="" /></center></th>
+                     <th style="width:150px; height:43px;"><center><a href = "#"><img class="img-fluid" src="resources/assets/FoodImg/Salad.jpg"  style="width:120px; height: 100px;"alt="" /></a></center>
+                     <th style="width:200px; height:43px;"><center><h3>달콤 샐러드</h3></center>
+                     <th style="width:150px; height:43px;"><center><h3>가격</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>1%</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>무료배송</h3></center></th>
+                   </tr>
+                </table>
+                <!-- 밑줄 -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+                
+                <!-- 상품랭킹4위 -->
+                <table style="width:100%">
+                   <tr style="height:100px;">
+                     <th style="width:150px; height:43px;"><center><img class="img-fluid" src="resources/assets/RankingImg/forth.png"  style="width:70px; height: 50px;"alt="" /></center></th>
+                     <th style="width:150px; height:43px;"><center><a href = "#"><img class="img-fluid" src="resources/assets/FoodImg/SweatPotato.jpg"  style="width:120px; height: 100px;"alt="" /></a></center>
+                     <th style="width:200px; height:43px;"><center><h3>아이스 고구마</h3></center>
+                     <th style="width:150px; height:43px;"><center><h3>가격</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>1%</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>무료배송</h3></center></th>
+                   </tr>
+                </table>
+                <!-- 밑줄 -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+                
+                <!-- 상품랭킹5위 -->
+                <table style="width:100%">
+                   <tr style="height:100px;">
+                     <th style="width:150px; height:43px;"><center><img class="img-fluid" src="resources/assets/RankingImg/fifth.png"  style="width:70px; height: 50px;"alt="" /></center></th>
+                     <th style="width:150px; height:43px;"><center><a href = "#"><img class="img-fluid" src="resources/assets/FoodImg/DietLunchBox.jpg"  style="width:120px; height: 100px;"alt="" /></a></center>
+                     <th style="width:200px; height:43px;"><center><h3>다이어트 도시락</h3></center>
+                     <th style="width:150px; height:43px;"><center><h3>가격</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>1%</h3></center>
+                     <th style="width:200px; height:43px;"><center><h3>무료배송</h3></center></th>
+                   </tr>
+                </table>
+                <!-- 밑줄 -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+            </div>  
         </section>
         
         <!-- Copyright Section(맨밑 하단)-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small><a href ="#" style="text-decoration:none;">회사소개</a>｜ <a href ="#" style="text-decoration:none;">이용약관</a> ｜ <a href ="#" style="text-decoration:none;">개인정보처리방침</a><br>
+            <div class="container"><small><a href ="#">회사소개</a>｜ <a href ="#">이용약관</a> ｜ <a href ="#">개인정보처리방침</a><br>
             (주)꾸준한거북이 ｜대표 : 김규헌 ｜ 개인정보보호책임자 : 원태연 ｜ 사업자등록번호: 111-22-34567 사업자정보 확인> ｜ 02-159-8948<br>
                      경기도 의정부시 서부로 545 경민대학교 ｜ FAX. 02-1234-5678 ｜ Email. steadyturtle@kyungmin.ac.kr</small>
             </div>

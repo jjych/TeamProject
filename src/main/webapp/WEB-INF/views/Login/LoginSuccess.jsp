@@ -17,19 +17,46 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="resources/css/styles.css" rel="stylesheet" />
+        
+        <!-- 슬라이드 효과 css -->
+        <style type="text/css">
+		/* 캐러셀 영역 설정 */
+		#recipeCarousel {
+			margin: 80px;
+			padding: -30px;
+		}
+		/* 이미지 캐러셀 크기 설정 */
+		.img-fluid {
+			max-height: 1800px;
+			max-width: 2000px;
+		}
+		/* 캐러셀 이미지 내부 캡션 영역 */
+		.innerCarouselCaption {
+			float: left;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+		.item_section {
+		float: left;
+		position: relative;
+		width: 100px;
+		height: 310px;
+		margin-left: 27px;
+		background: #fff;
+		-webkit-box-shadow: 3px 4px 5px 0 rgba(2, 2, 2, .2);
+		box-shadow: 3px 4px 5px 0 rgba(2, 2, 2, .2);
+		text-align: center;
+		}
+		</style>
     </head>
     <body id="page-top">
         <!-- Navigation 맨위 로고-->
-        <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav"
-        style="width:100%; height:250px;">
+        <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width:100%; height:250px;">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src = "resources/assets/img/mainrogo.png"
-                 style = "position:relative; top:-60px;"></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src = "resources/assets/img/mainrogo.png" style = "position:relative; top:-60px;"></a>
                  
                  <!-- 검색창 -->
                 <div class ="col-lg-6">
-    			  <form class="navbar-form navbar-left" role="search"
-    			  style = "position:relative; top:30px; left:-20px;">
+    			  <form class="navbar-form navbar-left" role="search" style = "position:relative; top:30px; left:-20px;">
        				<div class="form-group">
        				  <input type="text" class="form-control" placeholder="검색창" style="width:500px; height:50px;">
     			    </div>
@@ -38,15 +65,15 @@
      			   
      			   <!-- 헬스기구, 요가상품, 운동식품, 상품랭킹 문구 -->
      			       <ul class="nav nav-pills" style="position:relative; top:10px; left:-120px;">
-  						 <li role="presentation" style="position:relative;"><a href="#" style="text-decoration:none; font-size:30px;">헬스기구</a></li>
-  						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="text-decoration:none; font-size:30px;">요가상품</a></li>
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="text-decoration:none; font-size:30px;">운동식품</a></li>
+  						 <li role="presentation" style="position:relative;"><a href="Health" style="text-decoration:none; font-size:30px;">헬스기구</a></li>
+  						 <li role="presentation" style="position:relative; left:30px;"><a href="Yoga" style="text-decoration:none; font-size:30px;">요가상품</a></li>
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="Food" style="text-decoration:none; font-size:30px;">운동식품</a></li>
  					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="text-decoration:none; font-size:30px;" data-toggle="dropdown"> 상품랭킹 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                            <li><a href="ManRanking" style="color:#000000;">남여랭킹</a></li>
-                           <li><a href="#" style="color:#000000;">헬스기구 랭킹</a></li>
-                           <li><a href="#" style="color:#000000;">요가용품 랭킹</a></li>
-                           <li><a href="#" style="color:#000000;">건강식품 랭킹</a></li>
+                           <li><a href="HealthRanking" style="color:#000000;">헬스기구 랭킹</a></li>
+                           <li><a href="YogaRanking" style="color:#000000;">요가용품 랭킹</a></li>
+                           <li><a href="FoodRanking" style="color:#000000;">건강식품 랭킹</a></li>
                         </ul>
                          </li>
  					   </ul>
@@ -61,48 +88,64 @@
   						 <li role="presentation" style="position:relative; left:100px;"><a href="#">고객문의</a></li>
  					   </ul>
  					   
- 					   <!-- 회원, 비회원(주문하기) -->
-                    <div class="jumbotron" style="padding-top: 20px; width : 400px; height : 190px; position:relative; top:30px; left:20px;">
-                       <ul class="nav nav-tabs">
-  						 <li role="presentation" class="active" style="position:relative; left:60px;"><a href="#">회원</a></li>
-  						 <li role="presentation" style="position:relative; left:150px;"><a href="#">비회원(주문하기)</a></li>
- 					   </ul>
- 					   <br>
- 					   
- 					   <!-- 아이디, 비밀번호 입력후 로그인버튼 이벤트 -->
-               		   <form method ="post" action ="loginAction.jsp">
-                 		 <div class="form-group" style="position:relative; top:1px;">
-                      		I D : <input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20"
-                      		   style="width:200px; height: 40px; position:relative; left:40px;top:-30px;">
-                 		 </div>
-                 		 <div class="form-group" style="position:relative; top:-30px;">
-                      		PW : <input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20"
-                  	  	     style="width:200px; height: 40px; position:relative; left:40px; top:-30px;">
-                 		 </div>
-                  		    <input type="submit" class="btn btn-primary form-control" value="로그인"
-                  		    style="width:80px; height:80px; position:relative; top:-160px; left:250px;">
-              		   </form> 
-              		   
-              		   <!-- 아이디, 비밀번호찾기 ,회원가입 -->
-              		   <ul class="nav nav-pills" style="position:relative; top:-150px; left:30px;">
-  						 <li role="presentation" class="active"><a href="#">아이디 ·</a></li>
-  						 <li role="presentation"><a href="#">비밀번호 찾기</a></li>
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#">회원가입</a></li>
- 					   </ul>
-                	</div>
-                </div>
-            </div>
+ 					   <!-- 로그인성공된 창 -->
+ 					   <div class="jumbotron" style="padding-top: 20px; width: 400px; height: 190px; position: relative; top: 30px; left: 20px;">
+							<ul class="nav nav-tabs">
+								<li role="presentation" class="active" style="position: relative; left: 60px;">회원</li>
+							</ul>
+							<ul class="nav nav-pills" style="position: relative; top: 30px; left: 20px;">
+								<li role="presentation" class="active">
+									<p>사용기능/누적 <br /> 마일리지<br /> <label>3000/6000 p</label></p>
+								</li>
+								<li role="presentation" style="position: relative; left: 80px;">
+									<p style="position: relative;">나의 등급: 플래티넘 <br /> 원태연 님</p>
+								</li>
+							</ul>
+							<hr>
+							<!-- 아이디, 비밀번호찾기 ,회원가입 -->
+							<ul class="nav nav-pills" style="position: relative; top: -15px; left: 30px;">
+								<li role="presentation" class="active"><a href="#" style="color:black; text-decoration:none;">회원정보수정</a> /</li>
+								<li role="presentation"><a href="JumunSearch" style="color:black; text-decoration:none;"> 주문조회</a></li>
+								<li role="presentation" style="position: relative; left: 60px;">
+								<a href="main" style="color:black; text-decoration:none;">로그아웃</a>
+								</li>
+							</ul>
+						</div>
+			     </div>
         </nav>
             
-        <!--브랜드 이미지 로고 -->
-        <header class="bg-white text-white text-center">
-           <div class="container d-flex align-items-center flex-column">
-              <div class="divider-custom divider-light">
-                   <a class="navbar-brand" href="#">
-                       <img alt="picture" style="width:1500px;height:500px;" src="resources/assets/img/sex.png">
-                   </a>
-              </div>
-           </div>
+        <!-- 슬라이드 이미지  -->
+        <header class="bg-white text-white text-center" style="height:500px;">
+           <div class="container text-center my-3" style="position: relative; left: -100px; width: 3000px; height: 600px;">
+				<div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+					<div class="carousel-inner" role="listbox">
+
+						<div class="carousel-item row no-gutters active">
+							<div class="col-6 float-left">
+								<img class="img-fluid" src="resources/assets/img/f1.png" style="width: 1300px; height: 500px;">
+							</div>
+						</div>
+						<div class="carousel-item row no-gutters">
+							<div class="col-6 float-left">
+								<img class="img-fluid" src="resources/assets/img/h1.png" style="width: 1300px; height: 500px;">
+							</div>
+						</div>
+						<div class="carousel-item row no-gutters">
+							<div class="col-6 float-left">
+								<img class="img-fluid" src="resources/assets/img/y1.png" style="width: 1300px; height: 500px;">
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a> 
+					<a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+	       </div>
         </header>
         
         <!-- 추천상품-->
