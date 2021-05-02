@@ -146,7 +146,7 @@
                     <!-- 상품2-->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <a href = "#">
-                        <img class="img-fluid" src=resources/assets/FoodImg/DietLunchBox.PNG  style="width:270px; height: 200px;"alt="" />
+                        <img class="img-fluid" src="resources/assets/FoodImg/DietLunchBox.jpg"  style="width:270px; height: 200px;"alt="" />
                         </a>   
                            <br><br>
                            <h4> 상품명 : 마사지 볼</h4>
@@ -182,7 +182,7 @@
                     <!-- 상품-->
                     <div class="col-md-6 col-lg-4">
                         <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/Salad.PNG"  style="width:270px; height: 200px;"alt="" />
+                        <img class="img-fluid" src="resources/assets/FoodImg/Salad.jpg"  style="width:270px; height: 200px;"alt="" />
                         </a>   
                            <br><br>
                            <h4> 상품명 : 요가옷</h4>

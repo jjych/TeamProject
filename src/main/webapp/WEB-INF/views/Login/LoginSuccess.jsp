@@ -22,13 +22,13 @@
         <style type="text/css">
 		/* 캐러셀 영역 설정 */
 		#recipeCarousel {
-			margin: 80px;
-			padding: -30px;
+			margin: 10px;
+			padding: 10px;
 		}
 		/* 이미지 캐러셀 크기 설정 */
 		.img-fluid {
 			max-height: 1800px;
-			max-width: 2000px;
+			max-width: 1800px;
 		}
 		/* 캐러셀 이미지 내부 캡션 영역 */
 		.innerCarouselCaption {
@@ -116,23 +116,23 @@
             
         <!-- 슬라이드 이미지  -->
         <header class="bg-white text-white text-center" style="height:500px;">
-           <div class="container text-center my-3" style="position: relative; left: -100px; width: 3000px; height: 600px;">
+           <div class="container-fluid text-center my-3" style="position: relative; height: 600px;">
 				<div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
 					<div class="carousel-inner" role="listbox">
 
 						<div class="carousel-item row no-gutters active">
 							<div class="col-6 float-left">
-								<img class="img-fluid" src="resources/assets/img/f1.png" style="width: 1300px; height: 500px;">
+								<img class="img-fluid" src="resources/assets/img/f1.png" style="width: 2000px; height: 500px;">
 							</div>
 						</div>
 						<div class="carousel-item row no-gutters">
 							<div class="col-6 float-left">
-								<img class="img-fluid" src="resources/assets/img/h1.png" style="width: 1300px; height: 500px;">
+								<img class="img-fluid" src="resources/assets/img/h1.png" style="width: 2000px; height: 500px;">
 							</div>
 						</div>
 						<div class="carousel-item row no-gutters">
 							<div class="col-6 float-left">
-								<img class="img-fluid" src="resources/assets/img/y1.png" style="width: 1300px; height: 500px;">
+								<img class="img-fluid" src="resources/assets/img/y1.png" style="width: 2000px; height: 500px;">
 							</div>
 						</div>
 					</div>

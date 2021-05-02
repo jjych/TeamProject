@@ -149,13 +149,12 @@
                 <div class="btn-group" role="group" aria-label="...">  
                   <button type="button" class="btn btn-default" style="background-color:#a5d6a7;"><a href = "#" style="text-decoration:none; color:black;">12개월</a></button>
                 </div>
-                <p><b>기간 2021.04.28 ~ 2021.5.5</b><p>
+                <p><b>기간 2021.04.28 ~ 2021.5.5</b></p>
                 
                 <div class="row">     
                    <!-- 주문일자, 주문번호, 주문상세>> 및 밑줄 -->
                    <div class="divider-custom" style="display:block; width:1140px; height:30px;">
-                      <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <p><b>&emsp;&emsp;&emsp;&nbsp;
                        2021.04.29
                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

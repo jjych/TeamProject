@@ -135,9 +135,9 @@
               </div>
               <!-- 남성회원 여성회원 이미지 및 클릭시 이동  -->
               <div class="btn-group" role="group" aria-label="...">
-                 <a href="http://localhost:8088/ex/FoodRanking"><img src = "resources/assets/RankingImg/Food.png" style="width:70px; height:50px;"></a>
-                <a href="http://localhost:8088/ex/HealthRanking"><img src = "resources/assets/RankingImg/Health.png" style="width:70px; height:50px;"></a>
-                <a href="http://localhost:8088/ex/YogaRanking"><img src = "resources/assets/RankingImg/Yoga.png" style="width:70px; height:50px;"></a>
+                 <a href="FoodRanking"><img src = "resources/assets/RankingImg/Food.png" style="width:70px; height:50px;"></a>
+                <a href="HealthRanking"><img src = "resources/assets/RankingImg/Health.png" style="width:70px; height:50px;"></a>
+                <a href="YogaRanking"><img src = "resources/assets/RankingImg/Yoga.png" style="width:70px; height:50px;"></a>
               </div>
                <p style = "color:black; font-size:17px;">음식&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;헬스&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;요가</p>
            </div>

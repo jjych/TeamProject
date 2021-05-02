@@ -102,4 +102,11 @@ public class MyController {
 		return "CashOn";
 	}
 	
+	// 관리자모드 
+	// 메인페이지
+	@RequestMapping("/mainMaster")
+	public String mainMaster() {
+		return "Master/mainMaster";
+	}
+	
 }
