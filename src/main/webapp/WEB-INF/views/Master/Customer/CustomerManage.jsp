@@ -37,7 +37,7 @@ aside ul li{clear:both;float:left;margin-top:10px}
         <!-- Navigation 맨위 로고-->
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width:100%; height:250px;">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src = "resources/assets/img/mainrogo.png" style = "position:relative; top:-60px; left:-150px;"></a>
+                <a class="navbar-brand js-scroll-trigger" href="mainMaster"><img src = "resources/assets/img/mainrogo.png" style = "position:relative; top:-60px; left:-150px;"></a>
                  
                  <!-- 관리자모드 문구 -->
                 <div class ="col-lg-6">
@@ -80,7 +80,7 @@ aside ul li{clear:both;float:left;margin-top:10px}
 							<hr>
 							<!-- 아이디, 비밀번호찾기 ,회원가입 -->
 							<ul class="nav nav-pills" style="position: relative; top: -15px; left: 30px;">
-								<li role="presentation" class="active"><a href="MyPage" style="color:black; text-decoration:none;">회원정보수정</a></li>
+								<li role="presentation" class="active"><a href="#" style="color:black; text-decoration:none;">회원정보수정</a></li>
 								<li role="presentation" style="position: relative; left: 120px;">
 									<a href="main" style="color:black; text-decoration:none;">로그아웃</a>
 								</li>
@@ -133,24 +133,7 @@ aside ul li{clear:both;float:left;margin-top:10px}
 	
 	<!-- 선그래프 -->
 	<section class="page-section portfolio" id="portfolio">
-		<div class="col-lg-6">
-			<div class="" style="width:1000px; height:378px; position:relative; top:-150px; left:400px; ">
-				<div class="card-header">
-					<i class="fas fa-chart-area mr-1"></i>
-					상품 판매량
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					<a href="#" style="text-decoration:none;">더보기 +</a>
-				</div>
-				<div class="card-body">
-					<canvas id="myBarChart" width="100%" height="40%"></canvas>
-				</div>
-			</div>
-		</div>
+		
 		
 		<!-- 헬스,요가,운동 막대 색 표시 라벨 -->
 		<div class = "contanier" style="position:relative;">

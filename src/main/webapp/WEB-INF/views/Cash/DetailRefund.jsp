@@ -79,9 +79,9 @@
 					<li role="presentation" style="position: relative; left: 60px;"><a
 						href="basket">장바구니</a></li>
 					<li role="presentation" style="position: relative; left: 80px;"><a
-						href="#">상품환불</a></li>
+						href="refund">상품환불</a></li>
 					<li role="presentation" style="position: relative; left: 100px;"><a
-						href="#">고객문의</a></li>
+						href="CustomerWriteView">고객문의</a></li>
 				</ul>
 
 				<!-- 회원, 비회원(주문하기) -->
@@ -93,7 +93,7 @@
 							data-toggle="tab" data-load="true">회원</a></li>
 						<li class="nav-item" role="presentation"
 							style="position: relative; left: 150px;"><a href="#nLogin"
-							data-toggle="tab" data-load="false">비회원(주문하기)</a></li>
+							data-toggle="tab" data-load="false">비회원(주문조회)</a></li>
 					</ul>
 					<br>
 
@@ -205,13 +205,13 @@
 						<th colspan="5">
 							<h6 style="text-align: left;">사용한 마일리지</h6>
 						</th>
-						<th style="text-align: right;"><h6>1,000원</h6>
+						<th style="text-align: right;"><h6 style="color:red;">1,000원</h6>
 					</tr>
 					<tr>
 						<th colspan="5">
 							<h6 style="text-align: left;">결제금액</h6>
 						</th>
-						<th style="text-align: right;"><h6>10,000원</h6>
+						<th style="text-align: right;"><h3>10,000원</h3>
 					</tr>
 				</table>
 					<div class="divider-custom" style="display: block;">
@@ -224,7 +224,7 @@
 							<th colspan="4">
 								<h6 style="text-align: left;">상품 정보</h6>
 							</th>
-							<th><h6 style="text-align: right;">배송일</h6></th>
+							<th><h6>배송완료일</h6></th>
 						</tr>
 						<tr>
 							<th style="width: 200px;"><a href="#"> <img
@@ -271,9 +271,9 @@
 			<br />
 			<br />
 			<div style="text-align: center;">
-				<input type="button" class="btn btn-primary" value="홈으로"></input>
-				<input type="button" class="btn btn-primary" value="뒤로가기"></input>
-				<input type="button" class="btn btn-primary" value="환불요청"></input>
+				<a href="main" class="btn btn-info">홈으로</a>
+				<a href="refund" class="btn btn-info">뒤로가기</a>
+				<a href="RefundWrite" class="btn btn-info">환불요청</a>
 			</div>
 	</section>
 					

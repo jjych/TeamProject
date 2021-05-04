@@ -114,10 +114,16 @@ public class MyController {
 		return "Cash/refund";
 	}
 	
-	// (보류)환불상품 상세보기 페이지
+	// 환불상품 상세보기 페이지
 	@RequestMapping("DetailRefund")
 	public String DetailRefund() {
-		return "DetailRefund";
+		return "Cash/DetailRefund";
+	}
+	
+	// 환불요청 게시판작성 페이지
+	@RequestMapping("RefundWrite")
+	public String RefundWrite() {
+		return "Board/RefundWrite";
 	}
 	
 	// 고객문의게시판
@@ -133,12 +139,21 @@ public class MyController {
 	}
 	
 	// 회원정보 수정 페이지
+	@RequestMapping("MyPage")
+	public String MyPage() {
+		return "Login/MyPage";
+	}
 	
 	// 관리자모드 
 	// 메인페이지
 	@RequestMapping("/mainMaster")
 	public String mainMaster() {
 		return "Master/mainMaster";
+	}
+	
+	@RequestMapping("/CustomerManage")
+	public String CustomerManage() {
+		return "Master/Customer/CustomerManage";
 	}
 	
 }

@@ -154,7 +154,7 @@
                         <!-- 주문취소 버튼 -->
                     	<input type="submit" class="btn btn-primary form-control" value="주문취소" style=" position:relative; top:-10px; height:40px; width: 100px;"></input>
                     	<!-- 상품환불 버튼 -->
-                    	<input type="submit" class="btn" value="상품환불" style="height:40px; width: 100px; background-color:#e0e0e0;"></input>
+                    	<a class ="btn" href = "DetailRefund" style="height:40px; width: 100px; background-color:#e0e0e0;">상품환불</a>
                     </th>
                 </tr>
                 

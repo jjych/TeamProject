@@ -104,7 +104,7 @@
 							<hr>
 							<!-- 아이디, 비밀번호찾기 ,회원가입 -->
 							<ul class="nav nav-pills" style="position: relative; top: -15px; left: 30px;">
-								<li role="presentation" class="active"><a href="#" style="color:black; text-decoration:none;">회원정보수정</a> /</li>
+								<li role="presentation" class="active"><a href="MyPage" style="color:black; text-decoration:none;">회원정보수정</a> /</li>
 								<li role="presentation"><a href="JumunSearch" style="color:black; text-decoration:none;"> 주문조회</a></li>
 								<li role="presentation" style="position: relative; left: 60px;">
 								<a href="main" style="color:black; text-decoration:none;">로그아웃</a>
