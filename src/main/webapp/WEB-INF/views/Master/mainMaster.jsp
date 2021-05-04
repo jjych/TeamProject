@@ -23,6 +23,15 @@
 	rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="resources/css/styles.css" rel="stylesheet" />
+
+<!-- section aside 크기 설정하는곳 되도록 건들지않는게 페이지망가짐 적음 -->
+<style>
+section,aside{float:left; width:1603px;height:672px;padding:10px}
+section{width:1603px;background:white}
+aside{width:300px;background:white}
+aside ul{list-style:none; padding:0}
+aside ul li{clear:both;float:left;margin-top:10px}
+</style>
 </head>
 	<body id="page-top">
         <!-- Navigation 맨위 로고-->
@@ -125,7 +134,7 @@
 	<!-- 선그래프 -->
 	<section class="page-section portfolio" id="portfolio">
 		<div class="col-lg-6">
-			<div class="" style="width:1000px; height:378px; position: relative; top: -120px; left: 450px;">
+			<div class="" style="width:1000px; height:378px; position:relative; top:-150px; left:400px; ">
 				<div class="card-header">
 					<i class="fas fa-chart-area mr-1"></i>
 					상품 판매량
@@ -141,8 +150,9 @@
 					<canvas id="myBarChart" width="100%" height="40%"></canvas>
 				</div>
 			</div>
-			
 		</div>
+		
+		<!-- 헬스,요가,운동 막대 색 표시 라벨 -->
 		<div class = "contanier" style="position:relative;">
 			<div class="" style="background-color:#40c4ff; width: 70px; height: 10px; position:relative; left:700px;">
         	</div>
@@ -154,11 +164,25 @@
         	</div>
         	<b style="position: relative; left:1140px; top:-80px;">운동식품</b>
         </div>
+        
+     
 	</section>
+    
+    <!-- 사이드바 vip표시 -->
+    <aside style="text-align:center;">
+    <div style="position:relative; top:-250px; height: 800px; background-color:#c8e6c9;">
+    <br>
+        <h1>VIP 리스트</h1><br>
+        장혁수 플래티넘<br>
+        김규헌 플래티넘<br>
+        원태연 플래티넘<br>
+        이동진 플래티넘<br>
+        </div>
+    </aside>
 
-	<!-- Copyright Section(맨밑 하단)-->
+    <!-- Copyright Section(맨밑 하단)-->
 	<div class="copyright py-4 text-center text-white">
-		<div class="container">
+		<div class="container" style="position:relative; top:20px;"> 
 			<small><a href="#" style="text-decoration: none;">회사소개</a>｜ <a
 				href="#" style="text-decoration: none;">이용약관</a> ｜ <a href="#"
 				style="text-decoration: none;">개인정보처리방침</a><br> (주)꾸준한거북이 ｜대표 :
@@ -167,6 +191,9 @@
 				Email. steadyturtle@kyungmin.ac.kr</small>
 		</div>
 	</div>
+    
+	  
+	
 
 	<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
 	<div class="scroll-to-top d-lg-none position-fixed">

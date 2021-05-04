@@ -54,8 +54,8 @@
                        <!-- 장바구니, 상품환불, 고객문의 -->
                        <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
   						 <li role="presentation" style="position:relative; left:60px;"><a href="basket">장바구니</a></li>
-  						 <li role="presentation" style="position:relative; left:80px;"><a href="#">상품환불</a></li>
-  						 <li role="presentation" style="position:relative; left:100px;"><a href="#">고객문의</a></li>
+  						 <li role="presentation" style="position:relative; left:80px;"><a href="refund">상품환불</a></li>
+  						 <li role="presentation" style="position:relative; left:100px;"><a href="CustomerWriteView">고객문의</a></li>
  					   </ul>
  					   
  					   <!-- 회원, 비회원(주문하기) -->
@@ -65,7 +65,7 @@
 								<a href="#login" data-toggle="tab" data-load="true">회원</a>
 							</li>
 							<li class="nav-item" role="presentation" style="position: relative; left: 150px;">
-								<a href="#nLogin" data-toggle="tab" data-load="false">비회원(주문하기)</a>
+								<a href="#nLogin" data-toggle="tab" data-load="false">비회원(주문조회)</a>
 							</li>
 						 </ul>
  					     <br>

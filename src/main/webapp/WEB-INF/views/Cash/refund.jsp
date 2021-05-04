@@ -17,11 +17,6 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="resources/css/styles.css" rel="stylesheet" />
-        <script type = "text/javascript">
-           function check(){
-        	   alert('장바구니에 담으시겠나요?');
-           }
-        </script>
     </head>
     <body id="page-top">
         <!-- Navigation 맨위 로고-->
@@ -59,8 +54,8 @@
                        <!-- 장바구니, 상품환불, 고객문의 -->
                        <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
   						 <li role="presentation" style="position:relative; left:60px;"><a href="basket">장바구니</a></li>
-  						 <li role="presentation" style="position:relative; left:80px;"><a href="#">상품환불</a></li>
-  						 <li role="presentation" style="position:relative; left:100px;"><a href="#">고객문의</a></li>
+  						 <li role="presentation" style="position:relative; left:80px;"><a href="refund">상품환불</a></li>
+  						 <li role="presentation" style="position:relative; left:100px;"><a href="CustomerWriteView">고객문의</a></li>
  					   </ul>
  					   
  					   <!-- 회원, 비회원(주문하기) -->
@@ -70,7 +65,7 @@
 								<a href="#login" data-toggle="tab" data-load="true">회원</a>
 							</li>
 							<li class="nav-item" role="presentation" style="position: relative; left: 150px;">
-								<a href="#nLogin" data-toggle="tab" data-load="false">비회원(주문하기)</a>
+								<a href="#nLogin" data-toggle="tab" data-load="false">비회원(주문조회)</a>
 							</li>
 						 </ul>
  					     <br>
@@ -125,103 +120,56 @@
                 </div>
         </nav>
         
-        <!-- 상품보기 -->
-        <section class="page-section portfolio">
-        <form name = "product" action="./processAddProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
-            <div class = "container" style="background-color:#bbdefb;">
-                <div class ="row">
-                    <div class = "col-md-5">
-                      <br><br>
-                      <img src = "./resources/assets/HealthImg/h1.jpg" style="width:80%; height:70%;">
-                    </div>
-                    <div class = "col-md-6">
-                       <br>
-                       <h2><center>하체튼튼철봉</center></h2>
-                       <hr>
-                       <p><b style = "font-size:20px;">판매가 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;">150,000 원</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">판매량 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;">288,444 개</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">배송방법 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px; color:red;">무료배송</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">추가혜택 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px; color:blue;">1 % 적립</b>
-                       </p>
-                       <hr>
-                       <p><b style = "font-size:20px;">구매갯수 : </b>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <!-- db연동 -->
-                       <b style = "font-size:20px;"><input type ="number" class = "input" style ="width:60px; height:30px;" value = "1"> 개</b>
-                       </p>
-                       <hr>
-                       <!-- db연동 -->
-                       <h4 style="text-align:right;">총 결제금액 : 150,000원</h4>
-                       <hr>
-                       <!-- 뒤로가기 버튼클릭시 -->
-                       <p style="text-align:right;"><a href="#" class="btn btn-secondary">뒤로가기</a>
-                       <!-- 장바구니 버튼클릭시 -->
-                       <a href="basket" class="btn btn-info">장바구니</a>
-                       <!-- 바로구매 버튼클릭시 -->
-                       <input type = "submit" class="btn btn-info" value="바로구매">
-                       </p>
-                     </div>
-                 </div>
-            </div>   
-            </form>  
+        <!-- 상품환불 조회 --> 
+        <section class="page-section portfolio" style="height:1000px;">
+            <div class="container">
+                <table style="width:100%">
+                   <tr style="height:10px;">
+				   		<h3>상품환불</h3>
+				   </tr>
+				   
+				   <!-- 밑줄 -->
+				   <div class="divider-custom" style="display:block;">
+                      <hr style="background-color:black;">
+                   </div>
+                   <!-- 환불테이블 라벨 -->
+               		<tr>
+               		    <h5>&emsp;&emsp;&emsp;&emsp;&emsp;상품정보
+                			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;주문일자
+                  			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;주문번호
+                  			&emsp;&emsp;&emsp;&emsp;&emsp;주문금액
+                    		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;주문상태
+                		</h5>
+                	</tr>
+                	
+                	<!-- 상품정보 -->
+               		<tr>
+                	<th style="width:300px;"><a href = "#"><img class="img-fluid" src="resources/assets/FoodImg/f2.jpg"  style="width:110px; height: 100px;"/></a></th>
+               		<th style="width:300px;">프로틴(초코맛)</th>
+                    <th style="width:300px;">2021.05.04</th>
+                    <th style="width:290px;">11145784</th>
+                    <th style="width:250px;">8,000원<br>1개</th>
+                    <th style="width:150px;"><h style="color:orange;">배송준비</h></th>
+                    <th style="width:150px; height:100px;">
+                        <!-- 주문취소 버튼 -->
+                    	<input type="submit" class="btn btn-primary form-control" value="주문취소" style=" position:relative; top:-10px; height:40px; width: 100px;"></input>
+                    	<!-- 상품환불 버튼 -->
+                    	<input type="submit" class="btn" value="상품환불" style="height:40px; width: 100px; background-color:#e0e0e0;"></input>
+                    </th>
+                </tr>
+                
+                <!-- 밑줄 -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+                
+                </table>
+                <!-- 밑줄 -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+        </div>
+				   
         </section>
         
         <!-- Copyright Section(맨밑 하단)-->

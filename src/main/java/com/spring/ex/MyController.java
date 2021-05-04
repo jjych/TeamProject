@@ -81,7 +81,7 @@ public class MyController {
 	// 상품정보 페이지
 	@RequestMapping("/product")
 	public String product() {
-		return "product";
+		return "Cash/product";
 	}
 	
 	// 장바구니 페이지
@@ -96,11 +96,43 @@ public class MyController {
 		return "Login/JumunSearch";
 	}
 	
+	// 주문상품 상세보기 페이지
+	@RequestMapping("/DetailOrder")
+	public String DetailOrder() {
+		return "Cash/DetailOrder";
+	}
+	
 	// 결제창 페이지
 	@RequestMapping("CashOn")
 	public String CashOn() {
-		return "CashOn";
+		return "Cash/CashOn";
 	}
+	
+	// 환불조회 페이지
+	@RequestMapping("refund")
+	public String refund() {
+		return "Cash/refund";
+	}
+	
+	// (보류)환불상품 상세보기 페이지
+	@RequestMapping("DetailRefund")
+	public String DetailRefund() {
+		return "DetailRefund";
+	}
+	
+	// 고객문의게시판
+	@RequestMapping("CustomerWriteView")
+	public String CustomerWriteView() {
+		return "Board/CustomerWriteView";
+	}
+	
+	// 고객문의 글쓰기 페이지
+	@RequestMapping("CustomerWrite")
+	public String CustomerWrite() {
+		return "Board/CustomerWrite";
+	}
+	
+	// 회원정보 수정 페이지
 	
 	// 관리자모드 
 	// 메인페이지
