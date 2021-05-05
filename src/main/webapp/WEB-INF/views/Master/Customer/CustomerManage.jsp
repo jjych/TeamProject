@@ -24,14 +24,6 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="resources/css/styles.css" rel="stylesheet" />
 
-<!-- section aside 크기 설정하는곳 되도록 건들지않는게 페이지망가짐 적음 -->
-<style>
-section,aside{float:left; width:1603px;height:672px;padding:10px}
-section{width:1603px;background:white}
-aside{width:300px;background:white}
-aside ul{list-style:none; padding:0}
-aside ul li{clear:both;float:left;margin-top:10px}
-</style>
 </head>
 	<body id="page-top">
         <!-- Navigation 맨위 로고-->
@@ -49,7 +41,7 @@ aside ul li{clear:both;float:left;margin-top:10px}
   						 <li role="presentation" style="position:relative;"><a href="#" style="text-decoration:none; font-size:30px;">판매현황</a></li>
   						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="text-decoration:none; font-size:30px;">주문내역</a></li>
   						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="text-decoration:none; font-size:30px;">상품관리</a></li>
- 					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="text-decoration:none; font-size:30px;">회원관리</a></li>
+ 					     <li role="presentation" style="position:relative; left:90px;"><a href="CustomerManage" style="text-decoration:none; font-size:30px;">회원관리</a></li>
  					   </ul>
   				</div> 
                 
@@ -87,85 +79,136 @@ aside ul li{clear:both;float:left;margin-top:10px}
 							</ul>
 						</div>
 			     </div>
-        </nav>     
-     <!-- 헤더 (실적 문구 및 당일 기간정하기) -->
-	<header class="page-section portfolio">
-		<div class="container">
-            <!-- 고정바(순위,상품명,가격,마일리지,배송) 라벨-->
-               <table style="width:100%">
-                  <tr>
-                     <th style="width:200px; height:23px;">
-                     <select style = "width:150px; height:30px; position:relative; top:-5px; left:40px;">
-                        <option value = "">2021.05.02</option>
-                        <option value = "">2021.05.01</option>
-                        <option value = "">2021.04.30</option>
-                     </select>
-                     </th>
-                     <th style="width:170px; height:23px;"><center><h5>헬스기구</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>요가상품</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>운동식품</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>Total</h5></center></th>
-                   </tr>
-                </table>
-                <!-- 밑줄 -->
+        </nav>  
+	
+	<!-- 회원정보 목록창 -->
+	<section class="page-section portfolio" id="portfolio">
+	     <div class="container">
+	     		<!-- 회원정보 검색창(이름,아이디 검색) -->
+	            <div class="col-lg-6">
+	            <form class="navbar-form navbar-left" role="search" style = "position:relative; top:60px; left:850px;">
+       				<div class="form-group">
+       				  <input type="text" class="form-control" placeholder="검색창" style="width:150px; height:50px;">
+    			    </div>
+        			<button type="submit" class="btn btn-default" style="position:relative; top:-60px; left:140px;"><i class ="fas fa-search" style="width:30px; height:30px;"></i></button>
+     		    </form>
+     		    </div>
+     			   
+		       <!-- 밑줄 -->
                 <div class="divider-custom" style="display:block;">
                     <hr style="background-color:black;">
                 </div>
+                
+           	   <!-- 고정바(이름 , 아이디, 성별, 등급) 라벨  -->
+               <table style="width:100%">
+                  <tr>
+                     <th style="position:relative; left:80px;"><center><h4>이름</h4></center></th>
+                     <th style="position:relative; left:-30px;"><center><h4>아이디</h4></center></th>
+                     <th style="position:relative; left:-140px;"><center><h4>성별</h4></center></th> 
+                     <th style="position:relative; left:-190px;"><center><h4>등급</h4></center></th>
+                   </tr>
+                </table>
+               <!-- 밑줄 -->
+                <div class="divider-custom" style="display:block;">
+                    <hr style="background-color:black;">
+                </div>
+      
+                 <!-- 회원 정보 출력 -->
                 <table style="width:100%">
                   <tr>
-                     <th style="width:200px; height:23px;"><center><h5>판매금액(원)</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>1,587,200</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>944,200</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>1,214,200</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>3,745,600</h5></center></th>
+                     <th style="width:100px; height:23px;"><center><h5>9</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
+                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
+                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                   </tr>
+                   
+                   <tr>
+                     <th style="width:100px; height:23px;"><center><h5>8</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
+                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
+                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                   </tr>
+                   
+                   <tr>
+                     <th style="width:100px; height:23px;"><center><h5>7</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
+                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
+                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                   </tr>
+                   
+                   <tr>
+                     <th style="width:100px; height:23px;"><center><h5>6</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
+                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
+                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                   </tr>
+                   
+                   <tr>
+                     <th style="width:100px; height:23px;"><center><h5>5</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
+                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
+                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                   </tr>
+                   
+                   <tr>
+                     <th style="width:100px; height:23px;"><center><h5>4</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
+                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
+                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                   </tr>
+                   
+                   <tr>
+                     <th style="width:100px; height:23px;"><center><h5>3</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
+                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
+                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                   </tr>
+                   
+                   <tr>
+                     <th style="width:100px; height:23px;"><center><h5>2</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
+                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
+                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                   </tr>
+                   
+                   <tr>
+                     <th style="width:100px; height:23px;"><center><h5>1</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
+                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
+                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
                    </tr>
                 </table>
         </div>
-        <br>
-        
-        <!-- 연도 설정 -->
-        <div class = "container" style="height:50px;">
-           <input type="date" class="form-control" name="userDate" maxlength="20" style="width: 200px; height: 40px;">
-           <label style="position:relative; top:-35px; left:220px;"><h3>~</h3></label>
-           <input type="date" class="form-control" name="userDate" maxlength="20" style="width: 200px; height: 40px; position:relative; top:-90px; left:250px;">
-        </div>
-	</header>
-	
-	<!-- 선그래프 -->
-	<section class="page-section portfolio" id="portfolio">
-		
-		
-		<!-- 헬스,요가,운동 막대 색 표시 라벨 -->
-		<div class = "contanier" style="position:relative;">
-			<div class="" style="background-color:#40c4ff; width: 70px; height: 10px; position:relative; left:700px;">
-        	</div>
-        	<b style="position:relative; left:780px; top:-15px;">헬스기구</b>
-        	<div class="" style="background-color:#90a4ae; width: 70px; height: 10px; position: relative; left:880px; top:-33px;">
-        	</div>
-        	<b style="position: relative; left:960px; top:-48px;">요가상품</b>
-        	<div class="" style="background-color:#ff9e80; width: 70px; height: 10px; position: relative; left:1060px; top:-66px; ">
-        	</div>
-        	<b style="position: relative; left:1140px; top:-80px;">운동식품</b>
-        </div>
-        
-     
 	</section>
-    
-    <!-- 사이드바 vip표시 -->
-    <aside style="text-align:center;">
-    <div style="position:relative; top:-250px; height: 800px; background-color:#c8e6c9;">
-    <br>
-        <h1>VIP 리스트</h1><br>
-        장혁수 플래티넘<br>
-        김규헌 플래티넘<br>
-        원태연 플래티넘<br>
-        이동진 플래티넘<br>
+	
+	<!-- 밑줄 -->
+    <div class="container">
+        <div class="divider-custom" style="display:block;">
+            <hr style="background-color:black;">
         </div>
-    </aside>
+    </div>
 
     <!-- Copyright Section(맨밑 하단)-->
 	<div class="copyright py-4 text-center text-white">
-		<div class="container" style="position:relative; top:20px;"> 
+		<div class="container">
 			<small><a href="#" style="text-decoration: none;">회사소개</a>｜ <a
 				href="#" style="text-decoration: none;">이용약관</a> ｜ <a href="#"
 				style="text-decoration: none;">개인정보처리방침</a><br> (주)꾸준한거북이 ｜대표 :

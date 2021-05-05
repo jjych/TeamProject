@@ -49,7 +49,7 @@ aside ul li{clear:both;float:left;margin-top:10px}
   						 <li role="presentation" style="position:relative;"><a href="#" style="text-decoration:none; font-size:30px;">판매현황</a></li>
   						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="text-decoration:none; font-size:30px;">주문내역</a></li>
   						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="text-decoration:none; font-size:30px;">상품관리</a></li>
- 					     <li role="presentation" style="position:relative; left:90px;"><a href="#" style="text-decoration:none; font-size:30px;">회원관리</a></li>
+ 					     <li role="presentation" style="position:relative; left:90px;"><a href="CustomerManage" style="text-decoration:none; font-size:30px;">회원관리</a></li>
  					   </ul>
   				</div> 
                 
