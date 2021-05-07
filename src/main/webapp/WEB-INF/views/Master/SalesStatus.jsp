@@ -24,20 +24,13 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="resources/css/styles.css" rel="stylesheet" />
 
-<!-- section aside 크기 설정하는곳 되도록 건들지않는게 페이지망가짐 적음 -->
-<style>
-section,aside{float:left; width:1603px;height:672px;padding:10px}
-section{width:1603px;background:white}
-aside{width:300px;background:white}
-aside ul{list-style:none; padding:0}
-aside ul li{clear:both;float:left;margin-top:10px}
-</style>
+
 </head>
 	<body id="page-top">
         <!-- Navigation 맨위 로고-->
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width:100%; height:250px;">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src = "resources/assets/img/mainrogo.png" style = "position:relative; top:-60px; left:-150px;"></a>
+                <a class="navbar-brand js-scroll-trigger" href="mainMaster"><img src = "resources/assets/img/mainrogo.png" style = "position:relative; top:-60px; left:-150px;"></a>
                  
                  <!-- 관리자모드 문구 -->
                 <div class ="col-lg-6">
@@ -131,58 +124,67 @@ aside ul li{clear:both;float:left;margin-top:10px}
         </div>
 	</header>
 	
-	<!-- 선그래프 -->
-	<section class="page-section portfolio" id="portfolio">
+	<!-- 막대그래프 -->
+	<section class="page-section portfolio" id="portfolio" style="height:700px">
 		<div class="col-lg-6">
-			<div class="" style="width:1000px; height:378px; position:relative; top:-150px; left:400px; ">
+			<div class="" style="width:400px; height:200px; position:relative; top:-120px; left:280px; ">
 				<div class="card-header">
+				      <h1>
 					<i class="fas fa-chart-area mr-1"></i>
-					상품 판매량
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					<a href="SalesStatus" style="text-decoration:none;">더보기 +</a>
+					헬스기구
+					  </h1>
 				</div>
 				<div class="card-body">
-					<canvas id="myBarChart" width="100%" height="40%"></canvas>
+					<canvas id="myBarChart1" width="150%" height="110%"></canvas>
 				</div>
 			</div>
 		</div>
 		
-		<!-- 헬스,요가,운동 막대 색 표시 라벨 -->
+		<div class="col-lg-6">
+			<div class="" style="width:400px; height:200px; position:relative; top:-320px; left:780px; ">
+				<div class="card-header">
+				      <h1>
+					<i class="fas fa-chart-area mr-1"></i>
+					요가기구
+					  </h1>
+				</div>
+				<div class="card-body">
+					<canvas id="myBarChart2" width="150%" height="110%"></canvas>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-lg-6">
+			<div class="" style="width:400px; height:200px; position:relative; top:-520px; left:1280px; ">
+				<div class="card-header">
+				      <h1>
+					<i class="fas fa-chart-area mr-1"></i>
+					헬스기구
+					  </h1>
+
+				</div>
+				<div class="card-body">
+					<canvas id="myBarChart3" width="150%" height="110%"></canvas>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 남성,여성 막대 색 표시 라벨 -->
 		<div class = "contanier" style="position:relative;">
-			<div class="" style="background-color:#40c4ff; width: 70px; height: 10px; position:relative; left:700px;">
+			<div class="" style="background-color:#40c4ff; width: 70px; height: 10px; position:relative; left:800px;top:-320px;">
         	</div>
-        	<b style="position:relative; left:780px; top:-15px;">헬스기구</b>
-        	<div class="" style="background-color:#90a4ae; width: 70px; height: 10px; position: relative; left:880px; top:-33px;">
+        	<b style="position: relative; left:900px; top:-335px;">남성</b>
+        	<div class="" style="background-color:#ff9e80; width: 70px; height: 10px; position: relative; left:1000px; top:-355px; ">
         	</div>
-        	<b style="position: relative; left:960px; top:-48px;">요가상품</b>
-        	<div class="" style="background-color:#ff9e80; width: 70px; height: 10px; position: relative; left:1060px; top:-66px; ">
-        	</div>
-        	<b style="position: relative; left:1140px; top:-80px;">운동식품</b>
+        	<b style="position: relative; left:1100px; top:-370px;">여성</b>
         </div>
-        
      
 	</section>
     
-    <!-- 사이드바 vip표시 -->
-    <aside style="text-align:center;">
-    <div style="position:relative; top:-250px; height: 800px; background-color:#c8e6c9;">
-    <br>
-        <h1>VIP 리스트</h1><br>
-        장혁수 플래티넘<br>
-        김규헌 플래티넘<br>
-        원태연 플래티넘<br>
-        이동진 플래티넘<br>
-        </div>
-    </aside>
 
     <!-- Copyright Section(맨밑 하단)-->
 	<div class="copyright py-4 text-center text-white">
-		<div class="container" style="position:relative; top:20px;"> 
+		<div class="container">
 			<small><a href="#" style="text-decoration: none;">회사소개</a>｜ <a
 				href="#" style="text-decoration: none;">이용약관</a> ｜ <a href="#"
 				style="text-decoration: none;">개인정보처리방침</a><br> (주)꾸준한거북이 ｜대표 :
@@ -191,7 +193,7 @@ aside ul li{clear:both;float:left;margin-top:10px}
 				Email. steadyturtle@kyungmin.ac.kr</small>
 		</div>
 	</div>
-
+    
 	<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
 	<div class="scroll-to-top d-lg-none position-fixed">
 		<a class="js-scroll-trigger d-block text-center text-white rounded"
@@ -221,6 +223,9 @@ aside ul li{clear:both;float:left;margin-top:10px}
 	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 	<script src="resources/assets/demo/datatables-demo.js"></script>
+	<script src="resources/assets/demo/chart-bar-demo1.js"></script>
+	<script src="resources/assets/demo/chart-bar-demo2.js"></script>
+	<script src="resources/assets/demo/chart-bar-demo3.js"></script>
 
 </body>
 </html>

@@ -27,7 +27,8 @@
 
 <body id="page-top">
    <!-- Navigation 맨위 로고-->
-   <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width: 100%; height: 250px;">
+   <nav class="navbar navbar-expand-lg bg-white text-uppercase"
+      id="mainNav" style="width: 100%; height: 250px;">
       <div class="container">
          <a class="navbar-brand js-scroll-trigger" href="main"> 
          	<img src="resources/assets/img/mainrogo.png" style="position: relative; top: -60px;">
@@ -35,14 +36,11 @@
 
          <!-- 검색창 -->
          <div class="col-lg-6">
-            <form class="navbar-form navbar-left" role="search"
-               style="position: relative; top: 30px; left: -20px;">
+            <form class="navbar-form navbar-left" role="search" style="position: relative; top: 30px; left: -20px;">
                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="검색창"
-                     style="width: 500px; height: 50px;">
+                  <input type="text" class="form-control" placeholder="검색창" style="width: 500px; height: 50px;">
                </div>
-               <button type="submit" class="btn btn-default"
-                  style="position: relative; top: -60px; left: 500px;">
+               <button type="submit" class="btn btn-default" style="position: relative; top: -60px; left: 500px;">
                   <i class="fas fa-search" style="width: 30px; height: 30px;"></i>
                </button>
             </form>
@@ -50,8 +48,8 @@
             <!-- 헬스기구, 요가상품, 운동식품, 상품랭킹 문구 -->
             <ul class="nav nav-pills"
                style="position: relative; top: 10px; left: -120px;">
-               <li role="presentation" style="position: relative;"><a
-                  href="Health" style="text-decoration: none; font-size: 30px;">헬스기구</a>
+               <li role="presentation" style="position: relative;">
+               	  <a href="Health" style="text-decoration: none; font-size: 30px;">헬스기구</a>
                </li>
                <li role="presentation" style="position: relative; left: 30px;">
                   <a href="Yoga" style="text-decoration: none; font-size: 30px;">요가상품</a>
@@ -60,8 +58,7 @@
                   <a href="Food" style="text-decoration: none; font-size: 30px;">운동식품</a>
                </li>
                <li role="presentation" style="position: relative; left: 90px;">
-                  <a href="#" style="text-decoration: none; font-size: 30px;"
-                  data-toggle="dropdown"> 상품랭킹 <span class="caret"></span></a>
+                  <a href="#" style="text-decoration: none; font-size: 30px;" data-toggle="dropdown"> 상품랭킹 <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                      <li><a href="ManRanking" style="color: #000000;">남여랭킹</a></li>
                      <li><a href="HealthRanking" style="color: #000000;">헬스기구 랭킹</a></li>
@@ -72,7 +69,7 @@
             </ul>
          </div>
 
-         		<!-- 로그인창 -->
+         <!-- 로그인창 -->
                 <div class = "col-lg-4">
                        <!-- 장바구니, 상품환불, 고객문의 -->
                        <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
@@ -106,21 +103,20 @@
 						</div>
 			     </div>
    </nav>
-   <!-- 환불요청 -->
-   <!-- 환불요청게시판 작성양식 -->
+   <!-- 환불 -->
+   <!-- 환불요청 글쓰기 -->
    <section class="page-section portfolio">
       <div class="container">
          <div class="col-lg-12">
-         <center><h3 style="color:black;">환불요청</h3></center>
             <table>
                <tr>
-                  <th style="text-align: left;"><a href="#">
-                  	<img class="img-fluid" src="resources/assets/FoodImg/f2.jpg" style="width: 220px; height: 200px; position:relative; top:-20px;" /></a>
+                  <th style="text-align: left;"><a href="#"> 
+                  	<img class="img-fluid" src="resources/assets/FoodImg/f2.jpg" style="width: 220px; height: 200px;" /></a>
                   </th>
-                  <th>
-                  	<div style="text-align: right; margin-left: 20px;">
-                       <input type="text" style="text-align: center; width: 700px; height: 300px;" value="꼭 기재 해주세요. 1) 환불사유 2) 배송완료일 3) 상품사진첨부 4) 통장사본사진첨부" onclick="this.value='';" />
-                    </div>
+                  <th rowspan="4">
+                     <div style="text-align: right; margin-left: 20px;">
+                        <textarea class="form-control" placeholder="꼭 기재 해주세요. 1) 환불사유 2) 배송완료일 3) 상품사진첨부 4) 통장사본사진첨부" name="bbsContent" maxlength="2048" style="width: 700px; height: 300px; resize:none;"></textarea>
+                     </div>
                   </th>
                </tr>
                <tr>
@@ -133,42 +129,49 @@
                   <th style="text-align: center;">1 개</th>
                </tr>
             </table>
+            <form action="#" method="post" enctype="Multipart/form-data">
+               <table>
+                  <tr>
+                     <th>
+                        <div class="fileBox">
+                           <input type="text" id="img-file" readonly="readonly" style="width:820px; height: 35px;">
+                           <input type="button" value="파일업로드" onclick="onclick=document.all.file.click()">
+                           <input type="file" name="file" id="fileDocument" onchange="javascript:document.getElementById('img-file').value=this.value" style="display:none">
+                        </div>
+                     </th>
+                  </tr>
+                  <tr>
+                     <th>
+                        <div class="fileBox">
+                           <input type="text" id="img-file2" readonly="readonly" style="width:820px; height: 35px;">
+                           <input type="button" value="파일업로드" onclick="onclick=document.all.file2.click()">
+                           <input type="file" name="file2" id="fileDocument2" onchange="javascript:document.getElementById('img-file2').value=this.value" style="display:none">
+                           
+                        </div>
+                     </th>
+                  </tr>
+               </table>
+               <br /> <br />
+               <table>
+                  <tr>
+                     <th>
+                        <div>
+                           <h>비밀번호: </h>
+                           <input type="text" maxlength="4"
+                              style="margin-left: 10px; width: 120px; height: 35px;"
+                              value="4자리 숫자" onclick="this.value='';" />
+                        </div>
+                     </th>
 
-            <table>
-               <tr>
-                  <th>
-                     <div>
-                        <input type="text" style="text-align: center; width: 820px; height: 35px;" value="파일 업로드" onclick="this.value='';" />
-                     </div>
-                  </th>
-                  <th><input type="button" style="margin-left: 20px; width: 100px; height: 35px;" value="찾아보기" /></th>
-               </tr>
-               <th>
-                  <div>
-                     <input type="text" style="text-align: center; width: 820px; height: 35px;" value="파일 업로드" onclick="this.value='';" />
-                  </div>
-               </th>
-               	<th><input type="button" style="margin-left: 20px; width: 100px; height: 35px;" value="찾아보기" /></th>
-               <tr>
-               </tr>
-            </table>
-            <br /> <br />
-            <table>
-               <tr>
-                  <th>
-                     <div>
-                        <h>비밀번호: </h>
-                        <input type="text" maxlength="4" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')" style="margin-left: 10px; width: 120px; height: 35px;" value="4자리 숫자" onclick="this.value='';" />
-                     </div>
-                  </th>
-
-                  <th>
-                     <div style="margin-left: 525px;">
-                        <input type="button" style="width: 100px; height: 35px;" value="뒤로가기" /> <input type="button" style="margin-left: 10px; width: 100px; height: 35px;" value="환불신청" />
-                     </div>
-                  </th>
-               </tr>
-            </table>
+                     <th>
+                        <div style="margin-left: 525px;">
+                           <input type="button" style="width: 100px; height: 35px;" value="뒤로가기" /> 
+                           <input type="button" style="margin-left: 10px; width: 100px; height: 35px;" value="환불신청" />
+                        </div>
+                     </th>
+                  </tr>
+               </table>
+            </form>
          </div>
    </section>
 

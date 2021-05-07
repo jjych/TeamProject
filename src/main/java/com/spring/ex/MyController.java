@@ -151,9 +151,66 @@ public class MyController {
 		return "Master/mainMaster";
 	}
 	
+	// 판매현황 상세
+	@RequestMapping("/SalesStatus")
+	public String SalesStatus() {
+		return "Master/SalesStatus";
+	}
+	
+	// 주문요청 내역
+	@RequestMapping("/OrderHistory")
+	public String OrderHistory() {
+		return "Master/Manage/OrderHistory";
+	}
+	
+	// 상품관리 보기 페이지
+	@RequestMapping("/ProductManagement")
+	public String ProductManagement() {
+		return "Master/Manage/ProductManagement";
+	}
+	
+	// 상품관리 수정 페이지
+	@RequestMapping("/mREproduct")
+	public String mREproduct() {
+		return "Master/Manage/mREproduct";
+	}
+	
+	// 상품관리 추가 페이지
+	// 재고관리
+	
+	// 환불요청 목록
+	@RequestMapping("/MRefund")
+	public String MRefund() {
+		return "Master/Customer/MRefund";
+	}
+	
+	// 환불요청 상세내용 보기
+	@RequestMapping("MDetailRefund")
+	public String MDetailRefund() {
+		return "Master/Customer/MDetailRefund";
+	}
+	
+	// 고객문의 목록
+	@RequestMapping("MCustomerWriteView")
+	public String MCustomerWriteView() {
+		return "Master/Customer/MCustomerWriteView";
+	}
+	
+	// 고객문의 상세내용 보기
+	@RequestMapping("/ComplainView")
+	public String ComplainView() {
+		return "Master/Customer/ComplainView";
+	}
+	
+	// 회원관리 목록
 	@RequestMapping("/CustomerManage")
 	public String CustomerManage() {
 		return "Master/Customer/CustomerManage";
 	}
 	
+	// 회원관리 상세보기 보기(보류)
+	@RequestMapping("/DetailCustomerManage")
+	public String DetailCustomerManage() {
+		return "Master/Customer/DetailCustomerManage";
+	}
 }

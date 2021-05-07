@@ -38,9 +38,9 @@
                 </div> 
      			   <!-- 판매현황, 주문내역, 환불요청 ,고객문의 문구 -->
      			       <ul class="nav nav-pills" style="position:relative; top:40px; left:-120px;">
-  						 <li role="presentation" style="position:relative;"><a href="#" style="text-decoration:none; font-size:30px;">판매현황</a></li>
-  						 <li role="presentation" style="position:relative; left:30px;"><a href="#" style="text-decoration:none; font-size:30px;">주문내역</a></li>
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#" style="text-decoration:none; font-size:30px;">상품관리</a></li>
+  						 <li role="presentation" style="position:relative;"><a href="SalesStatus" style="text-decoration:none; font-size:30px;">판매현황</a></li>
+  						 <li role="presentation" style="position:relative; left:30px;"><a href="OrderHistory" style="text-decoration:none; font-size:30px;">주문내역</a></li>
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="ProductManagement" style="text-decoration:none; font-size:30px;">상품관리</a></li>
  					     <li role="presentation" style="position:relative; left:90px;"><a href="CustomerManage" style="text-decoration:none; font-size:30px;">회원관리</a></li>
  					   </ul>
   				</div> 
@@ -50,8 +50,8 @@
                        <!-- 재고관리, 환불요청, 고객문의 -->
                        <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
   						 <li role="presentation" style="position:relative; left:60px;"><a href="#">재고관리</a></li>
-  						 <li role="presentation" style="position:relative; left:80px;"><a href="#">환불요청</a></li>
-  						 <li role="presentation" style="position:relative; left:100px;"><a href="#">고객문의</a></li>
+  						 <li role="presentation" style="position:relative; left:80px;"><a href="MRefund">환불요청</a></li>
+  						 <li role="presentation" style="position:relative; left:100px;"><a href="MCustomerWriteView">고객문의</a></li>
  					   </ul>
  					   
  					   <!-- 로그인성공된 창 -->
@@ -72,7 +72,7 @@
 							<hr>
 							<!-- 아이디, 비밀번호찾기 ,회원가입 -->
 							<ul class="nav nav-pills" style="position: relative; top: -15px; left: 30px;">
-								<li role="presentation" class="active"><a href="#" style="color:black; text-decoration:none;">회원정보수정</a></li>
+								<li role="presentation" class="active"><a href="MyPage" style="color:black; text-decoration:none;">회원정보수정</a></li>
 								<li role="presentation" style="position: relative; left: 120px;">
 									<a href="main" style="color:black; text-decoration:none;">로그아웃</a>
 								</li>
@@ -121,7 +121,7 @@
                      <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
                      <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
                      <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                     <th style="width:200px; height:23px;"><center><a href="DetailCustomerManage" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
                    </tr>
                    
                    <tr>
