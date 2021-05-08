@@ -24,8 +24,8 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="resources/css/styles.css" rel="stylesheet" />
 
-
 </head>
+<!-- 상품관리 상품보기 페이지 -->
 <body id="page-top">
         <!-- Navigation 맨위 로고-->
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width:100%; height:250px;">
@@ -50,7 +50,7 @@
                 <div class = "col-lg-4">
                        <!-- 재고관리, 환불요청, 고객문의 -->
                        <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#">재고관리</a></li>
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="InventoryManage">재고관리</a></li>
   						 <li role="presentation" style="position:relative; left:80px;"><a href="MRefund">환불요청</a></li>
   						 <li role="presentation" style="position:relative; left:100px;"><a href="MCustomerWriteView">고객문의</a></li>
  					   </ul>
@@ -260,8 +260,7 @@
 				<hr style="background-color: black;">
 			</div>
 		</div>
-		
-		<input type="submit" class="btn btn" value="추가하기" style="background-color: #ffdb4d; width: 100px; height: 40px; position: relative; left: 1400px;">
+		<a href="Addproduct" class="btn btn-primary" style="position: relative; left: 1400px; width: 100px; height: 40px; background-color: #ffdb4d; color: #004d99;">추가하기</a>
 	</section>
 
 

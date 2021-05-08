@@ -24,6 +24,7 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="resources/css/styles.css" rel="stylesheet" />
 </head>
+<!-- 상품관리 수정하기 페이지 -->
 <body id="page-top">
         <!-- Navigation 맨위 로고-->
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width:100%; height:250px;">
@@ -48,7 +49,7 @@
                 <div class = "col-lg-4">
                        <!-- 재고관리, 환불요청, 고객문의 -->
                        <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#">재고관리</a></li>
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="InventoryManage">재고관리</a></li>
   						 <li role="presentation" style="position:relative; left:80px;"><a href="MRefund">환불요청</a></li>
   						 <li role="presentation" style="position:relative; left:100px;"><a href="MCustomerWriteView">고객문의</a></li>
  					   </ul>
@@ -79,8 +80,8 @@
 						</div>
 			     </div>
         </nav>
-	<!-- 주문 -->
-	<!-- 상품랭킹 -->
+        
+	<!-- 상품수정 -->
 	<section class="page-section portfolio" style =" height: 600px;">
 		<div class="container">
 			<div class="col-lg-12">
@@ -89,24 +90,34 @@
 						<table style="width:100%;">
 							<tr>
 								<td rowspan="6">
-								 	<img class="img-fluid" src="resources/assets/FoodImg/f2.jpg"
-										style="width: 180px; height: 200px;" />
+								 	<img class="img-fluid" src="resources/assets/FoodImg/f2.jpg" style="width: 180px; height: 200px;" />
 								</td>
 								<td>
-									<a style="margin-left: 8px;">판매가</a>
+									<b style="margin-left: 9px;">상품명</b>
 								</td>
 								<td>
-									<input type="text" style="margin-left: 6px;" />
+									<input type="text" style="margin-left:6px; text-align:center;" value="프로틴(초코맛)"/>
 								</td>
-								<th><a style="margin-left: 2px;">개</a></th>
+								
 							</tr>
 							<tr>
-								<th><a style="margin-left: 8px;">잔여량</a></th>
-								<th><a style="margin-left: 8px;">44444</a></th>
-								<th><a style="margin-left: 2px;">개</a></th>
+								<td>
+									<b style="margin-left: 8px;">판매가</b>
+								</td>
+								<td>
+									<input type="text" style="margin-left: 6px; text-align:right;" value="8,000" />
+								</td>
+								<th><b style="margin-left: 2px;">원</b></th>
 							</tr>
 							<tr>
-								<th><a style="margin-left: 8px;">배송방법</a></th>
+								<th><b style="margin-left: 8px;">잔여량</b></th>
+								<td>
+									<input type="text" style="margin-left: 6px; text-align:right;" value="4444" />
+								</td>
+								<th><b style="margin-left: 2px;">개</b></th>
+							</tr>
+							<tr>
+								<th><b style="margin-left: 8px;">배송방법</b></th>
 								<th>
 									<div class="list-group" style="margin-left: 8px;">
 										<select class="form-control" name="userGender">
@@ -117,19 +128,20 @@
 								</th>
 							</tr>
 							<tr>
-								<th><a style="margin-left: 8px;">추가혜택</a></th>
-								<th><input type="text" style="margin-left: 6px; width: 50px; height: 35px;" /></th>
-								<th><a style="margin-left: 2px;">% 적립</a></th>
+								<th><b style="margin-left: 8px;">추가혜택</b></th>
+								<th><input type="text" style="margin-left: 6px; width: 50px; height: 35px; position:relative; left:120px; text-align:center;" value="1" /></th>
+								<th><b style="margin-left: 2px;">% 적립</b></th>
 							</tr>
 							<tr>
-								<th><a style="margin-left: 8px;">카테고리</a></th>
+								<th><b style="margin-left: 8px;">카테고리</b></th>
 								<th><div class="list-group" style="margin-left: 8px;">
 										<select class="form-control" name="userGender">
 											<option>헬스기구</option>
 											<option>요가상품</option>
-											<option>운동식품</option>
+											<option>건강식품</option>
 										</select>
-									</div></th>
+									</div>
+							   </th>
 							</tr>	
 						</table>
 					</div>
@@ -157,18 +169,18 @@
 							<br />
 							
 						<div style="text-align: right;">
-						    <a href="ProductManagement" class="btn btn-primary" style="width:100px; margin-left:10px;">목록</a>
-							<input type="button" class="btn btn-primary" value="삭제" style="width:100px; margin-left:10px;"></input>
-							<input type="button" class="btn btn-primary" value="수정" style="width:100px; margin-left:10px;"></input>
+							<!-- 뒤로가기 버튼클릭시 -->
+                        	<a href="ProductManagement" class="btn btn-info">뒤로가기</a>
+                    		<!-- 삭제하기 버튼클릭시 -->
+                    		<input type = "submit" class="btn btn-info" value="삭제하기">
+                    		<!-- 수정하기 버튼클릭시 -->
+                    		<input type = "submit" class="btn btn-info" value="수정하기">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-
-
 
 	<!-- Copyright Section(맨밑 하단)-->
 	<div class="copyright py-4 text-center text-white">

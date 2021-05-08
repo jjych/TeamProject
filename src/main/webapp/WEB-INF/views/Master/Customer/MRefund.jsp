@@ -22,6 +22,7 @@
 <link href="resources/css/styles.css" rel="stylesheet" />
 <title>꾸준한거북이 - 헬스기구쇼핑몰</title>
 </head>
+<!--  환불요청 페이지 -->
 <body id="page-top">
         <!-- Navigation 맨위 로고-->
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width:100%; height:250px;">
@@ -46,7 +47,7 @@
                 <div class = "col-lg-4">
                        <!-- 재고관리, 환불요청, 고객문의 -->
                        <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="#">재고관리</a></li>
+  						 <li role="presentation" style="position:relative; left:60px;"><a href="InventoryManage">재고관리</a></li>
   						 <li role="presentation" style="position:relative; left:80px;"><a href="MRefund">환불요청</a></li>
   						 <li role="presentation" style="position:relative; left:100px;"><a href="MCustomerWriteView">고객문의</a></li>
  					   </ul>

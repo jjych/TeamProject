@@ -24,6 +24,7 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="resources/css/styles.css" rel="stylesheet" />
 </head>
+<!-- 환불요청 상세보기 -->
 <body id="page-top">
 	<!-- Navigation 맨위 로고-->
 	<nav class="navbar navbar-expand-lg bg-white text-uppercase"

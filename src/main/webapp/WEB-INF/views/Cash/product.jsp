@@ -23,6 +23,7 @@
            }
         </script>
     </head>
+    <!-- 상품클릭시 상세보기 페이지 -->
     <body id="page-top">
         <!-- Navigation 맨위 로고-->
         <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width:100%; height:250px;">

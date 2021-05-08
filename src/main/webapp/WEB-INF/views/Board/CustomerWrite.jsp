@@ -23,6 +23,7 @@
 <link href="resources/css/styles.css" rel="stylesheet" />
 <title>꾸준한거북이 - 헬스기구쇼핑몰</title>
 </head>
+<!-- 고객문의 글쓰기 -->
 <body>
 	<!-- Navigation 맨위 로고-->
 	<nav class="navbar navbar-expand-lg bg-white text-uppercase"

@@ -176,7 +176,16 @@ public class MyController {
 	}
 	
 	// 상품관리 추가 페이지
+	@RequestMapping("/Addproduct")
+	public String Addproduct() {
+		return "Master/Manage/Addproduct";
+	}
+	
 	// 재고관리
+	@RequestMapping("/InventoryManage")
+	public String InventoryManage() {
+		return "Master/Manage/InventoryManage";
+	}
 	
 	// 환불요청 목록
 	@RequestMapping("/MRefund")
