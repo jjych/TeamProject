@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,10 +90,13 @@
          </div>
       </nav>  
 	
-	<!-- 고객문의 상세내용 및 답변달기 -->
+	<!-- 회원정보 상세보기 -->
 	<section class="page-section portfolio" id="portfolio">
 	     <div class="container">
 			<div class="row">
+			<%int i = 0; %>
+			<c:forEach items="${memberList}" var="member">
+			<c:if test = "${member.getmName() == '장혁수' }"> 
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>
@@ -104,46 +108,48 @@
 				<tbody>
 					<tr style="background-color:#e1f5fe;">
 						<td style="width: 20%;"><b>이름</b></td>
-						<td colspan="2">장혁수</td>
+						<td colspan="2">${member.getmName() }</td>
 					</tr>
 					<tr style="background-color:#e1f5fe;">
 						<td><b>아이디</b></td>
-						<td colspan="2">efefa114</td>
+						<td colspan="2">${member.getmId() }</td>
 					</tr>
 					<tr style="background-color:#e1f5fe;">
 						<td><b>비밀번호</b></td>
-						<td colspan="2">gge6781</td>
+						<td colspan="2">${member.getmPw() }</td>
 					</tr>
 					<tr style="background-color:#e1f5fe;">
 						<td><b>전화번호</b></td>
-						<td colspan="2">01084457164</td>
+						<td colspan="2">${member.getmPhone() }</td>
 					</tr>
 					<tr style="background-color:#e1f5fe;">
 						<td><b>성별</b></td>
-						<td colspan="2">남</td>
+						<td colspan="2">${member.getmGender() }</td>
 					</tr>
 					<tr style="background-color:#e1f5fe;">
 						<td><b>주소</b></td>
-						<td colspan="2">서울 노원구 덕릉로94길 6</td>
+						<td colspan="2">${member.getmAddr() }</td>
 					</tr>
 					<tr style="background-color:#e1f5fe;">
 						<td><b>등급</b></td>
-						<td colspan="2">플래티넘</td>
+						<td colspan="2">${member.getmGrade() }</td>
 					</tr>
 					<tr style="background-color:#e1f5fe;">
 						<td><b>생년월일</b></td>
-						<td colspan="2">19980304</td>
+						<td colspan="2">${member.getmBirth() }</td>
 					</tr>
 					<tr style="background-color:#e1f5fe;">
 						<td><b>이메일</b></td>
-						<td colspan="2">efss45@naver.com</td>
+						<td colspan="2">${member.getmEmail() }</td>
 					</tr>
 					<tr style="background-color:#e1f5fe;">
 						<td><b>마일리지</b></td>
-						<td colspan="2">3,337/16,414 P</td>
+						<td colspan="2">${member.getmMile() } / ${member.getmCumulmile() } P</td>
 					</tr>
 				</tbody>
 			</table>
+			</c:if>
+			</c:forEach>
 			
 			<div class="container">
         	<div class="row">

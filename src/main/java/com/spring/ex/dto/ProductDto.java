@@ -15,6 +15,8 @@ public class ProductDto {
 	private String pCountSell;
 	// 상품 누적판매액
 	private String pCumulSell;
+	// 상품 적립 마일리ㅣ
+	private String pMile;
 	// 상품이미지 URL
 	private String pUrl;
 	// 상품구매자 수(남성)
@@ -63,6 +65,12 @@ public class ProductDto {
 	}
 	public void setpCumulSell(String pCumulSell) {
 		this.pCumulSell = pCumulSell;
+	}
+	public String getpMile() {
+		return pMile;
+	}
+	public void setpMile(String pMile) {
+		this.pMile = pMile;
 	}
 	public String getpUrl() {
 		return pUrl;

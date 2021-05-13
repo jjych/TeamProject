@@ -20,8 +20,13 @@ public class MyController {
 	TurtleService service;
 
 	// 메인페이지
-	@RequestMapping("/main")
-	public String main() {
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public String main(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList",list);
+		
 		return "Main/main";
 	}
 	
@@ -89,26 +94,46 @@ public class MyController {
 	}
 	
 	// 헬스기구랭킹 페이지
-	@RequestMapping("/HealthRanking")
-	public String HealthRanking() {
+	@RequestMapping(value = "/HealthRanking", method = RequestMethod.GET)
+	public String HealthRanking(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList", list);
+		
 		return "Ranking/HealthRanking";
 	}
 		
 	// 요가상품랭킹 페이지
-	@RequestMapping("/YogaRanking")
-	public String YogaRanking() {
+	@RequestMapping(value = "/YogaRanking", method = RequestMethod.GET)
+	public String YogaRanking(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList", list);
+		
 		return "Ranking/YogaRanking";
 	}
 
 	// 운동식품랭킹 페이지
-	@RequestMapping("/FoodRanking")
-	public String FoodRanking() {
+	@RequestMapping(value = "/FoodRanking", method = RequestMethod.GET)
+	public String FoodRanking(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList", list);
+		
 		return "Ranking/FoodRanking";
 	}
 	
 	// 상품정보 페이지
-	@RequestMapping("/product")
-	public String product() {
+	@RequestMapping(value = "/product", method = RequestMethod.GET)
+	public String product(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList", list);
+		
 		return "Cash/product";
 	}
 	
@@ -197,8 +222,13 @@ public class MyController {
 	}
 	
 	// 상품관리 보기 페이지
-	@RequestMapping("/ProductManagement")
-	public String ProductManagement() {
+	@RequestMapping(value = "/ProductManagement", method = RequestMethod.GET)
+	public String ProductManagement(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList", list);
+		
 		return "Master/Manage/ProductManagement";
 	}
 	
@@ -255,9 +285,14 @@ public class MyController {
 		return "Master/Customer/CustomerManage";
 	}
 	
-	// 회원관리 상세보기 보기(보류)
-	@RequestMapping("/DetailCustomerManage")
-	public String DetailCustomerManage() {
+	// 회원관리 상세보기 보기
+	@RequestMapping(value = "/DetailCustomerManage", method = RequestMethod.GET)
+	public String DetailCustomerManage(Model model) throws Exception {
+		
+		List<MemberDto> list = service.memberList();
+		
+		model.addAttribute("memberList",list);
+		
 		return "Master/Customer/DetailCustomerManage";
 	}
 }

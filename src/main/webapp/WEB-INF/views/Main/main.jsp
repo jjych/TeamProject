@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -201,61 +202,20 @@
                 
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
-                    <!-- 추천상품1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/f2.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 프로틴(초콜릿맛)</h4>
-                           <h5> 가격 : 8,000원</h5>
-                    </div>
-                    <!-- 추천상품2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/YogaImg/y1.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 요가링</h4>
-                           <h5> 가격 : 11,000원</h5>
-                    </div>
-                    <!-- 추천상품3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/YogaImg/y2.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 돌기봉</h4>
-                           <h5> 가격 : 4,000원</h5>
-                    </div>
-                    <!-- 추천상품4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/HealthImg/h1.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 전신헬스기구</h4>
-                           <h5> 가격 : 1,370,000원</h5>
-                    </div>
-                    <!-- 추천상품5-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/f1.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 이솔레이트</h4>
-                           <h5> 가격 : 12,000원</h5>
-                    </div>
-                    <!-- 추천상품6-->
-                    <div class="col-md-6 col-lg-4">
-                        <a href = "#">
-                        <img class="img-fluid" src="resources/assets/FoodImg/f3.jpg"  style="width:270px; height: 200px;"alt="" />
-                        </a>   
-                           <br><br>
-                           <h4> 상품명 : 에이치프로틴(초콜릿맛)</h4>
-                           <h5> 가격 : 13,000원</h5>
-                    </div>
-                </div>
+                    <%int i=0;%>
+       				<c:forEach items="${productList}" var="product">
+        				<%if(i<6){ %>
+        				   <div class="col-md-6 col-lg-4 mb-5">
+        				   		<a href = "#">
+        				   		<img class="img-fluid" src="${product.getpUrl() }"  style="width:270px; height: 200px;"/>
+                           		</a>   
+                           		<br><br>
+                           		<h4> 상품명 : ${product.getpName() }</h4>
+                           		<h5> 가격 : ${product.getpPrice() } 원</h5>
+                           </div>
+        				<%} i++; %>
+    				</c:forEach>
+                 </div>   
             </div>
         </section>        
         

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,151 +95,33 @@
 		<div class="container">
 			<div class="col-lg-12">
 				<div class="row">
-					<div class="col-lg-6">
-						<table style="width: 100%;">
+    				<%int i=0;%>
+       				<c:forEach items="${productList}" var="product">
+						<div class="col-lg-6 mb-5">
+							<table style="width: 100%;">
 							<tr>
 								<td rowspan="6" style="width: 200px;"><a href="#"> 
-									<img class="img-fluid" src="resources/assets/FoodImg/f2.jpg" style="width: 150px; height: 150px;" /></a>
+									<img class="img-fluid" src="${product.getpUrl() }" style="width: 150px; height: 150px;" /></a>
 								</td>
-								<th><a style="text-align: center;">상품명:111</a></th>
+								<th><a style="text-align: center;">상품명: ${product.getpName() }</a></th>
 								<td rowspan="6">
 									<a href="mREproduct" class="btn btn-primary" style="width: 100px; height: 40px; background-color: #ffdb4d; color: #004d99;">수정하기</a>
 								</td>
 							</tr>
 							<tr>
-								<th><a style="text-align: center;">가격:30000원</a></th>
+								<th><a style="text-align: center;">가격:${product.getpPrice() }원</a></th>
 							</tr>
 							<tr>
-								<th><a style="text-align: center;">무료배송</a></th>
+								<th><a style="text-align: center;">${product.getpShip() }</a></th>
 							<tr>
-								<th><a style="text-align: center;">1%적립</a></th>
+								<th><a style="text-align: center;">${product.getpMile() }%적립</a></th>
 							</tr>
 							<tr>
-								<th><a style="text-align: center;">카테고리</a></th>
+								<th><a style="text-align: center;">${product.getpCate() }</a></th>
 							</tr>
-						</table>
-					</div>
-					<div class="col-lg-6">
-						<table style="width: 100%;">
-							<tr>
-								<td rowspan="6" style="width: 200px;"><a href="#">
-									<img class="img-fluid" src="resources/assets/FoodImg/ChickenBreast.PNG" style="width: 150px; height: 150px;" /></a>
-								</td>
-								<th><a style="text-align: center;">상품명:222</a></th>
-								<td rowspan="6">
-									<a href="mREproduct" class="btn btn-primary" style="width: 100px; height: 40px; background-color: #ffdb4d; color: #004d99;">수정하기</a>
-								</td>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">가격:30000원</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">무료배송</a></th>
-							<tr>
-								<th><a style="text-align: center;">1%적립</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">카테고리</a></th>
-							</tr>
-						</table>
-					</div>
-					<div class="col-lg-6">
-						<table style="width: 100%;">
-							<tr>
-								<td rowspan="6" style="width: 200px;"><a href="#">
-									<img class="img-fluid" src="resources/assets/FoodImg/DietLunchBox.jpg" style="width: 150px; height: 150px;" /></a>
-								</td>
-								<th><a style="text-align: center;">상품명:333</a></th>
-								<td rowspan="6">
-								<a href="mREproduct" class="btn btn-primary" style="width: 100px; height: 40px; background-color: #ffdb4d; color: #004d99;">수정하기</a>
-								</td>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">가격:30000원</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">무료배송</a></th>
-							<tr>
-								<th><a style="text-align: center;">1%적립</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">카테고리</a></th>
-							</tr>
-						</table>
-					</div>
-					<div class="col-lg-6">
-						<table style="width: 100%;">
-							<tr>
-								<td rowspan="6" style="width: 200px;"><a href="#">
-									<img class="img-fluid" src="resources/assets/FoodImg/f1.jpg" style="width: 150px; height: 150px;" /></a>
-								</td>
-								<th><a style="text-align: center;">상품명:444</a></th>
-								<td rowspan="6">
-									<a href="mREproduct" class="btn btn-primary" style="width: 100px; height: 40px; background-color: #ffdb4d; color: #004d99;">수정하기</a>
-								</td>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">가격:30000원</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">무료배송</a></th>
-							<tr>
-								<th><a style="text-align: center;">1%적립</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">카테고리</a></th>
-							</tr>
-						</table>
-					</div>
-					<div class="col-lg-6">
-						<table style="width: 100%;">
-							<tr>
-								<td rowspan="6" style="width: 200px;"><a href="#"> 
-									<img class="img-fluid" src="resources/assets/FoodImg/f3.jpg" style="width: 150px; height: 150px;" /></a>
-								</td>
-								<th><a style="text-align: center;">상품명:555</a></th>
-								<td rowspan="6">
-									<a href="mREproduct" class="btn btn-primary" style="width: 100px; height: 40px; background-color: #ffdb4d; color: #004d99;">수정하기</a>
-								</td>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">가격:30000원</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">무료배송</a></th>
-							<tr>
-								<th><a style="text-align: center;">1%적립</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">카테고리</a></th>
-							</tr>
-						</table>
-						`
-					</div>
-					<div class="col-lg-6">
-						<table style="width: 100%;">
-							<tr>
-								<td rowspan="6" style="width: 200px;"><a href="#"> 
-									<img class="img-fluid" src="resources/assets/FoodImg/Salad.jpg" style="width: 150px; height: 150px;" /></a>
-								</td>
-								<th><a style="text-align: center;">상품명:666</a></th>
-								<td rowspan="6">
-									<a href="mREproduct" class="btn btn-primary" style="width: 100px; height: 40px; background-color: #ffdb4d; color: #004d99;">수정하기</a>
-								</td>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">가격:30000원</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">무료배송</a></th>
-							<tr>
-								<th><a style="text-align: center;">1%적립</a></th>
-							</tr>
-							<tr>
-								<th><a style="text-align: center;">카테고리</a></th>
-							</tr>
-						</table>
-					</div>
+							</table>
+						</div>
+					</c:forEach>
 				</div>
 			</div>
 		</div>

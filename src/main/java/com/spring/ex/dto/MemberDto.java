@@ -11,6 +11,8 @@ public class MemberDto {
 	private String mGender;
 	// 휴대전화
 	private String mPhone;
+	// 생년월일
+	private String mBirth;
 	// 이메일
 	private String mEmail;
 	// 주소
@@ -57,6 +59,12 @@ public class MemberDto {
 	}
 	public void setmPhone(String mPhone) {
 		this.mPhone = mPhone;
+	}
+	public String getmBirth() {
+		return mBirth;
+	}
+	public void setmBirth(String mBirth) {
+		this.mBirth = mBirth;
 	}
 	public String getmEmail() {
 		return mEmail;
