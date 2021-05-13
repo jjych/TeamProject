@@ -1,10 +1,23 @@
 package com.spring.ex;
 
+import java.util.List;
+
+import javax.inject.Inject;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.spring.ex.dto.MemberDto;
+import com.spring.ex.dto.ProductDto;
+import com.spring.ex.service.TurtleService;
 
 @Controller
 public class MyController {
+	
+	@Inject
+	TurtleService service;
 
 	// 메인페이지
 	@RequestMapping("/main")
@@ -31,20 +44,35 @@ public class MyController {
 	}
 	
 	// 헬스기구 페이지
-	@RequestMapping("/Health")
-	public String Health() {
+	@RequestMapping(value = "/Health", method = RequestMethod.GET)
+	public String Health(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList",list);
+		
 		return "Main/Health";
 	}
 	
 	// 요가상품 페이지
-	@RequestMapping("/Yoga")
-	public String Yoga() {
+	@RequestMapping(value = "/Yoga", method = RequestMethod.GET)
+	public String Yoga(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList",list);
+		
 		return "Main/Yoga";	
 	}
 	
 	// 운동식품 페이지
-	@RequestMapping("/Food")
-	public String Food() {
+	@RequestMapping(value = "/Food", method = RequestMethod.GET)
+	public String Food(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList",list);
+		
 		return "Main/Food";
 	}
 	
@@ -146,8 +174,13 @@ public class MyController {
 	
 	// 관리자모드 
 	// 메인페이지
-	@RequestMapping("/mainMaster")
-	public String mainMaster() {
+	@RequestMapping(value = "/mainMaster", method = RequestMethod.GET)
+	public String mainMaster(Model model) throws Exception {
+		
+		List<MemberDto> list = service.memberList();
+		
+		model.addAttribute("memberList", list);
+		
 		return "Master/mainMaster";
 	}
 	
@@ -212,8 +245,13 @@ public class MyController {
 	}
 	
 	// 회원관리 목록
-	@RequestMapping("/CustomerManage")
-	public String CustomerManage() {
+	@RequestMapping(value = "/CustomerManage", method = RequestMethod.GET)
+	public String CustomerManage(Model model) throws Exception {
+		
+		List<MemberDto> list = service.memberList();
+		
+		model.addAttribute("memberList",list);
+		
 		return "Master/Customer/CustomerManage";
 	}
 	

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,59 +29,66 @@
     <!--  회원관리 페이지 -->
 	<body id="page-top">
         <!-- Navigation 맨위 로고-->
-        <nav class="navbar navbar-expand-lg bg-white text-uppercase" id="mainNav" style="width:100%; height:250px;">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="mainMaster"><img src = "resources/assets/img/mainrogo.png" style = "position:relative; top:-60px; left:-150px;"></a>
-                 
-                 <!-- 관리자모드 문구 -->
-                <div class ="col-lg-6">
-                <div class="jumbotron" style="padding-top: 1px; width: 700px; height: 10px; position: relative; top: 10px; left:-150px;">
-                   <center><h2 style="position:relative; top:10px;">관리자 모드</h2></center>
+        <nav class="navbar " id="mainNav" style="width:100%; height:300px; background-color:#000000;">
+            <div class="container-fluid">
+                 <div class="col-lg-4">
+                   <a class="navbar-brand js-scroll-trigger" href="mainMaster"><img src = "resources/assets/img/SteadyTurtle.png" style = "position:relative; top:-40px;"></a>
                 </div> 
-     			   <!-- 판매현황, 주문내역, 환불요청 ,고객문의 문구 -->
-     			       <ul class="nav nav-pills" style="position:relative; top:40px; left:-120px;">
-  						 <li role="presentation" style="position:relative;"><a href="SalesStatus" style="text-decoration:none; font-size:30px;">판매현황</a></li>
-  						 <li role="presentation" style="position:relative; left:30px;"><a href="OrderHistory" style="text-decoration:none; font-size:30px;">주문내역</a></li>
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="ProductManagement" style="text-decoration:none; font-size:30px;">상품관리</a></li>
- 					     <li role="presentation" style="position:relative; left:90px;"><a href="CustomerManage" style="text-decoration:none; font-size:30px;">회원관리</a></li>
- 					   </ul>
-  				</div> 
+                 <!-- 검색창 -->
+                <div class ="col-lg-5">
+               <form class="navbar-form navbar-left" role="search">
+                  <div class="row">
+                      <div class="jumbotron" style="padding-top: 1px; width: 700px; height: 10px; position:relative; left:-60px;">
+                        <h2 style="position:relative; top:10px; text-align:center;">관리자 모드</h2>
+                     </div>
+                    </div>
+                 </form>
+                    
+                 <!-- 판매현황, 주문내역, 상품관리, 회원관리 문구 -->
+                     <ul class="nav nav-pills" style="position:relative; top:30px; left:-50px;">
+                     <li role="presentation" style="position:relative; "><a href="SalesStatus" style="color:#ffff8d; text-decoration:none; font-size:30px;">판매현황</a></li>
+                     <li role="presentation" style="position:relative; left:30px;"><a href="OrderHistory" style="color:#ffff8d; text-decoration:none; font-size:30px;">주문내역</a></li>
+                     <li role="presentation" style="position:relative; left:60px;"><a href="ProductManagement" style="color:#ffff8d; text-decoration:none; font-size:30px;">상품관리</a></li>
+                     <li role="presentation" style="position:relative; left:90px;"><a href="CustomerManage" style="color:#ffff8d; text-decoration:none; font-size:30px;">회원관리</a></li>
+                   </ul>
+              </div> 
                 
                 <!-- 로그인창 -->
-                <div class = "col-lg-4">
+                <div class = "col-lg-3">
                        <!-- 재고관리, 환불요청, 고객문의 -->
-                       <ul class="nav nav-pills" style="position:relative; top:20px; left:100px;">
-  						 <li role="presentation" style="position:relative; left:60px;"><a href="InventoryManage">재고관리</a></li>
-  						 <li role="presentation" style="position:relative; left:80px;"><a href="MRefund">환불요청</a></li>
-  						 <li role="presentation" style="position:relative; left:100px;"><a href="MCustomerWriteView">고객문의</a></li>
- 					   </ul>
- 					   
- 					   <!-- 로그인성공된 창 -->
- 					   <div class="jumbotron" style="padding-top: 20px; width: 400px; height: 190px; position: relative; top: 30px; left: 20px;">
-							<ul class="nav nav-tabs">
-								<li role="presentation" class="active" style="position: relative; left: 60px;"><a href="LoginSuccess" style="text-decoration:none; color:#bdbdbd;">회원</a></li>
-								<li role="presentation" class="active" style="position: relative; left: 180px;">관리자모드</li>
-							</ul>
-							<ul class="nav nav-pills" style="position: relative; top: 40px; left: 40px;">
-								<li role="presentation" class="active">
-									<h3>관리자</h3>
-								</li>
-								<li role="presentation" style="position: relative; left: 70px;">
-									<h3>원태연 님</h3>
-								</li>
-							</ul>
-							<br><br>
-							<hr>
-							<!-- 아이디, 비밀번호찾기 ,회원가입 -->
-							<ul class="nav nav-pills" style="position: relative; top: -15px; left: 30px;">
-								<li role="presentation" class="active"><a href="MyPage" style="color:black; text-decoration:none;">회원정보수정</a></li>
-								<li role="presentation" style="position: relative; left: 120px;">
-									<a href="main" style="color:black; text-decoration:none;">로그아웃</a>
-								</li>
-							</ul>
-						</div>
-			     </div>
-        </nav>  
+                       <ul class="nav nav-pills">
+                     <li role="presentation" style="position:relative; left:40px;"><a href="InventoryManage" style="color:#fff;">재고관리</a></li>
+                     <li role="presentation" style="position:relative; left:60px;"><a href="MRefund" style="color:#fff;">환불요청</a></li>
+                     <li role="presentation" style="position:relative; left:80px;"><a href="MCustomerWriteView" style="color:#fff;">고객문의</a></li>
+                   </ul>
+                   
+                   <!-- 회원,관리자모드 -->
+                   <div class="jumbotron" style="padding-top: 20px; width: 400px; height: 190px; position:relative; top:10px; left:-100px;">
+                     <ul class="nav nav-tabs">
+                        <li role="presentation" class="active" style="position: relative; left: 60px;"><a href="LoginSuccess" style="text-decoration:none; color:#bdbdbd;">회원</a></li>
+                        <li role="presentation" class="active" style="position: relative; left: 180px;">관리자모드</li>
+                     </ul>
+                     <ul class="nav nav-pills" style="position: relative; top: 40px; left: 40px;">
+                        <li role="presentation" class="active">
+                           <h3>관리자</h3>
+                        </li>
+                        <li role="presentation" style="position: relative; left: 70px;">
+                           <h3>원태연 님</h3>
+                        </li>
+                     </ul>
+                     <br><br>
+                     <hr>
+                     <!-- 회원정보수정,로그아웃 -->
+                     <ul class="nav nav-pills" style="position: relative; top: -15px; left: 30px;">
+                        <li role="presentation" class="active"><a href="MyPage" style="color:black; text-decoration:none;">회원정보수정</a></li>
+                        <li role="presentation" style="position: relative; left: 120px;">
+                           <a href="main" style="color:black; text-decoration:none;">로그아웃</a>
+                        </li>
+                     </ul>
+                  </div>
+                </div>
+         </div>
+      </nav>  
 	
 	<!-- 회원정보 목록창 -->
 	<section class="page-section portfolio" id="portfolio">
@@ -116,86 +124,17 @@
       
                  <!-- 회원 정보 출력 -->
                 <table style="width:100%">
-                  <tr>
-                     <th style="width:100px; height:23px;"><center><h5>9</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="DetailCustomerManage" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
-                   </tr>
-                   
-                   <tr>
-                     <th style="width:100px; height:23px;"><center><h5>8</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
-                   </tr>
-                   
-                   <tr>
-                     <th style="width:100px; height:23px;"><center><h5>7</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
-                   </tr>
-                   
-                   <tr>
-                     <th style="width:100px; height:23px;"><center><h5>6</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
-                   </tr>
-                   
-                   <tr>
-                     <th style="width:100px; height:23px;"><center><h5>5</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
-                   </tr>
-                   
-                   <tr>
-                     <th style="width:100px; height:23px;"><center><h5>4</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
-                   </tr>
-                   
-                   <tr>
-                     <th style="width:100px; height:23px;"><center><h5>3</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
-                   </tr>
-                   
-                   <tr>
-                     <th style="width:100px; height:23px;"><center><h5>2</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
-                   </tr>
-                   
-                   <tr>
-                     <th style="width:100px; height:23px;"><center><h5>1</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>장혁수</h5></center></th>
-                     <th style="width:170px; height:23px;"><center><h5>uufle178</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><h5>남</h5></center></th> 
-                     <th style="width:200px; height:23px;"><center><h5>플래티넘</h5></center></th>
-                     <th style="width:200px; height:23px;"><center><a href="#" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
-                   </tr>
+                   <%int i = 0; %>
+       				 <c:forEach items="${memberList}" var="member">
+        				<tr>
+                     		<th style="width:100px; height:23px;"><center><h5><%= i= i+1%></h5></center></th>
+                     		<th style="width:200px; height:23px;"><center><h5>${member.getmName() }</h5></center></th>
+                     		<th style="width:170px; height:23px;"><center><h5>${member.getmId() }</h5></center></th>
+                     		<th style="width:200px; height:23px;"><center><h5>${member.getmGender() }</h5></center></th> 
+                     		<th style="width:200px; height:23px;"><center><h5>${member.getmGrade() }</h5></center></th>
+                     		<th style="width:200px; height:23px;"><center><a href="DetailCustomerManage" class="btn" style="background-color:#ffb74d; color:white;">상세보기</a></center></th>
+                   		</tr>
+    				</c:forEach>
                 </table>
         </div>
 	</section>
