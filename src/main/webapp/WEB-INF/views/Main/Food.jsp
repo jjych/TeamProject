@@ -79,14 +79,14 @@
                        <div class="tab-content">
                   <div class="tab-pane fade show active" id="login">
                      <!-- 아이디, 비밀번호 입력후 로그인버튼 이벤트 -->
-                     <form method="post" action="loginAction.jsp">
+                     <form method="post" action="LoginSuccess">
                          <!-- 아이디입력 -->
                         <div class="form-group" style="position: relative; top: 1px;">
-                           I D : <input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
+                           I D : <input type="text" class="form-control" placeholder="아이디" id="mId" name="mId" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
                         </div>
                         <!-- 비밀번호입력 -->
                         <div class="form-group" style="position: relative; top: -30px;">
-                           PW : <input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
+                           PW : <input type="password" class="form-control" placeholder="비밀번호" id = "mPw" name="mPw" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
                         </div>
                         <!-- 로그인버튼 -->
                         <input type="submit" class="btn" value="로그인" style="color:#fff;  background-color:#373737; width: 100px; height: 80px; position: relative; top: -160px; left: 250px;">

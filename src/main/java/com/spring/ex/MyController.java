@@ -3,14 +3,20 @@ package com.spring.ex;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.ex.dto.MemberDto;
 import com.spring.ex.dto.ProductDto;
+import com.spring.ex.service.ServiceTurtle;
 import com.spring.ex.service.TurtleService;
 
 @Controller
@@ -18,6 +24,15 @@ public class MyController {
 	
 	@Inject
 	TurtleService service;
+	
+	@Inject
+	public MyController(TurtleService service) {
+		this.service = service;
+	}
+	
+	// 로그인시 필요
+	@Autowired
+	private ServiceTurtle ServiceTurtle;
 
 	// 메인페이지
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
@@ -31,9 +46,18 @@ public class MyController {
 	}
 	
 	// 회원가입 페이지
-	@RequestMapping("/join")
-	public String join() {
+	@RequestMapping(value = "/join", method = RequestMethod.GET)
+	public String join() throws Exception {
 		return "Login/join";
+	}
+	
+	// 회원가입 후 메인페이지로 보내
+	@RequestMapping(value = "/main", method = RequestMethod.POST)
+	public String joinPOST(MemberDto dto, RedirectAttributes redirectAttributes) throws Exception {
+
+		service.register(dto);
+
+		return "redirect:/main";
 	}
 	
 	// 아이디, 비밀번호찾기 페이지
@@ -46,6 +70,28 @@ public class MyController {
 	@RequestMapping("/LoginSuccess")
 	public String Login() {
 		return "Login/LoginSuccess";
+	}
+	
+	// 로그인시 보이는화면
+	@RequestMapping(value = "/LoginSuccess", method = RequestMethod.POST)
+	public String Login(MemberDto ldto, HttpServletRequest req, RedirectAttributes rttr) throws Exception {
+
+	    String path = "";
+	    HttpSession session = req.getSession();
+
+	    MemberDto login = ServiceTurtle.login(ldto);
+	    if (login == null) {
+	       session.setAttribute("member", null);
+	       rttr.addFlashAttribute("msg", false);
+	       path = "redirect:/main";
+	    } else {
+	       session.setAttribute("member", login);
+	        
+	       path = "redirect:/LoginSuccess";
+	    }
+
+	    return path;
+
 	}
 	
 	// 헬스기구 페이지

@@ -78,14 +78,14 @@
                        <div class="tab-content">
                   <div class="tab-pane fade show active" id="login">
                      <!-- 아이디, 비밀번호 입력후 로그인버튼 이벤트 -->
-                     <form method="post" action="loginAction.jsp">
+                     <form method="post" action="LoginSuccess">
                          <!-- 아이디입력 -->
                         <div class="form-group" style="position: relative; top: 1px;">
-                           I D : <input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
+                           I D : <input type="text" class="form-control" placeholder="아이디" id="mId" name="mId" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
                         </div>
                         <!-- 비밀번호입력 -->
                         <div class="form-group" style="position: relative; top: -30px;">
-                           PW : <input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
+                           PW : <input type="password" class="form-control" placeholder="비밀번호" id = "mPw" name="mPw" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 40px; top: -30px;">
                         </div>
                         <!-- 로그인버튼 -->
                         <input type="submit" class="btn" value="로그인" style="color:#fff;  background-color:#373737; width: 100px; height: 80px; position: relative; top: -160px; left: 250px;">
@@ -127,66 +127,101 @@
             
         <!-- 회원가입  -->
         <section class="page-section portfolio" id="portfolio">
-           <div class="container" style="height:500px; width: 100%; height: 100%; background-color:#e3f2fd;">
-         <div class="col-lg-12">
-            <h1 style="position: relative; top: -20px; left: 400px;">회원가입</h1>
-            <!-- 아이디 입력 -->
-            <div class="list-group" style="position: relative; top: 30px; left: 200px;">
-               아이디 : <input type="text" class="form-control" placeholder="입력해주세요" name="userID" maxlength="20" style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
-               <input type="submit" class="btn btn-primary form-control" value="중복확인" style="width: 100px; height: 40px; position: relative; top: -70px; left: 480px;">
-               <p style="color: red; width: 300px; height: 20px; position: relative; top: -60px; left: 10px;">※ 4-16자 이상 영문 또는 숫자만 사용가능</p>
-            </div>
-            
-            <!-- 비밀번호 입력 -->
-            <div class="list-group" style="position: relative; top: -20px; left: 200px;">
-               비밀번호 : <input type="password" class="form-control" placeholder="입력해주세요" name="userPw" maxlength="20" style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
-            </div>
-            
-            <!-- 비밀번호 확인 -->
-            <div class="list-group" style="position: relative; top: -20px; left: 200px;">
-               비밀번호 확인 : <input type="password" class="form-control" placeholder="입력해주세요" name="userPwOk" maxlength="20" style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
-            </div>
-            
-            <!-- 이름 입력 -->
-            <div class="list-group" style="position: relative; top: -20px; left: 200px;">
-               이름 : <input type="text" class="form-control" placeholder="입력해주세요" name="userName" maxlength="20" style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
-            </div>
-            
-            <!-- 전화번호 입력 -->
-            <div class="list-group" style="position: relative; top: -20px; left: 200px;">
-               전화번호 : <input type="text" class="form-control" placeholder="입력해주세요" name="userNumber" maxlength="20" style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
-            </div>
-            
-            <!-- 이메일 입력 -->
-            <div class="list-group" style="position: relative; top: -20px; left: 200px;">
-               이메일 : <input type="email" class="form-control" placeholder="입력해주세요" name="userEmail" maxlength="10" style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
-            </div>
-            
-            <!-- 주소 입력 -->
-            <div class="list-group" style="position: relative; top: -20px; left: 200px;">
-               주소 : <input type="text" class="form-control" placeholder="입력해주세요" name="userID" maxlength="20" style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
-            </div>
-            
-            <!-- 생년월일 입력 -->
-            <div class="list-group" style="position: relative; top: -20px; left: 200px;">
-               생년월일 : <input type="date" class="form-control" placeholder="입력해주세요" name="userDate" maxlength="20" style="width: 200px; height: 40px; position: relative; left: 130px; top: -30px;">
-            </div>
-            
-            <!-- 성별 -->
-            <div class="list-group" style="position: relative; top: -20px; left: 200px;">
-               성별 :  <select class="form-control" name="userGender" style="width: 200px; height: 40px; position: relative; left: 130px; top: -30px;">
-                     <option>남성</option>
-                     <option>여성</option>
-                    </select>
-            </div>
-            <br>
-            <!-- 회원가입하기 버튼 -->
-            <div class="list-group" style="text-align:right;">
-               <input type="submit" class="btn btn-primary form-control" value="회원가입하기" style="width: 150px; height: 40px; position: relative; top: -50px; left: 480px;">
-            </div>
-         </div>
-      </div>
-        </section>
+		<div class="container"
+			style="height: 500px; width: 100%; height: 100%; background-color: #e3f2fd;">
+			<div class="col-lg-12">
+				<form action="main" method="post">
+					<h1 style="position: relative; top: -20px; left: 400px;">회원가입</h1>
+					<!-- 아이디 입력 -->
+					<div class="list-group"
+						style="position: relative; top: 30px; left: 200px;">
+						아이디 : <input type="text" class="form-control" placeholder="입력해주세요"
+							id="mId" name="mId" maxlength="20"
+							style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
+						<input type="submit" class="btn btn-primary form-control"
+							value="중복확인"
+							style="width: 100px; height: 40px; position: relative; top: -70px; left: 480px;">
+						<p
+							style="color: red; width: 300px; height: 20px; position: relative; top: -60px; left: 10px;">※
+							4-16자 이상 영문 또는 숫자만 사용가능</p>
+					</div>
+
+					<!-- 비밀번호 입력 -->
+					<div class="list-group"
+						style="position: relative; top: -20px; left: 200px;">
+						비밀번호 : <input type="password" class="form-control"
+							placeholder="입력해주세요" id="mPw" name="mPw" maxlength="20"
+							style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
+					</div>
+
+					<!-- 비밀번호 확인 -->
+					<div class="list-group"
+						style="position: relative; top: -20px; left: 200px;">
+						비밀번호 확인 : <input type="password" class="form-control"
+							placeholder="입력해주세요" id="mPw" name="userPwOk" maxlength="20"
+							style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
+					</div>
+
+					<!-- 이름 입력 -->
+					<div class="list-group"
+						style="position: relative; top: -20px; left: 200px;">
+						이름 : <input type="text" class="form-control" placeholder="입력해주세요"
+							id="mName" name="mName" maxlength="20"
+							style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
+					</div>
+
+					<!-- 전화번호 입력 -->
+					<div class="list-group"
+						style="position: relative; top: -20px; left: 200px;">
+						전화번호 : <input type="text" class="form-control"
+							placeholder="입력해주세요" id="mPhone" name="mPhone" maxlength="20"
+							style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
+					</div>
+
+					<!-- 이메일 입력 -->
+					<div class="list-group"
+						style="position: relative; top: -20px; left: 200px;">
+						이메일 : <input type="email" class="form-control"
+							placeholder="입력해주세요" id="mEmail" name="mEmail" maxlength="10"
+							style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
+					</div>
+
+					<!-- 주소 입력 -->
+					<div class="list-group"
+						style="position: relative; top: -20px; left: 200px;">
+						주소 : <input type="text" class="form-control" placeholder="입력해주세요"
+							id="mAddr" name="mAddr" maxlength="20"
+							style="width: 300px; height: 40px; position: relative; left: 130px; top: -30px;">
+					</div>
+
+					<!-- 생년월일 입력 -->
+					<div class="list-group"
+						style="position: relative; top: -20px; left: 200px;">
+						생년월일 : <input type="date" class="form-control"
+							placeholder="입력해주세요" id="mBirth" name="mBirth" maxlength="20"
+							style="width: 200px; height: 40px; position: relative; left: 130px; top: -30px;">
+					</div>
+
+					<!-- 성별 -->
+					<div class="list-group"
+						style="position: relative; top: -20px; left: 200px;">
+						성별 : <select class="form-control" id="mGender" name="mGender"
+							style="width: 200px; height: 40px; position: relative; left: 130px; top: -30px;">
+							<option>남성</option>
+							<option>여성</option>
+						</select>
+					</div>
+					<br>
+					<!-- 회원가입하기 버튼 -->
+					<div class="list-group" style="text-align: right;">
+						<input type="submit" class="btn btn-primary form-control"
+							value="회원가입하기"
+							style="width: 150px; height: 40px; position: relative; top: -50px; left: 480px;">
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
         
         <!-- Copyright Section(맨밑 하단)-->
         <div class="copyright py-4 text-center text-white">

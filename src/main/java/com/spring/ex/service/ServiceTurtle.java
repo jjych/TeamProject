@@ -23,6 +23,22 @@ public class ServiceTurtle implements TurtleService{
 		return memberDao.memberList();
 	}
 	
+	// 회원가입
+	@Inject MemberDao dao;
+	
+	@Override
+	public void register(MemberDto dto) throws Exception {
+		
+		dao.register(dto);
+
+	}
+	
+	//로그인
+	@Override
+	public MemberDto login(MemberDto ldto) throws Exception{
+		return dao.login(ldto);
+	}
+	
 	// 상품정보
 	@Inject
 	private MemberDao productDao;

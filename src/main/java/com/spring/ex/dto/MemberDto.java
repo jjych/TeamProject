@@ -115,6 +115,16 @@ public class MemberDto {
 		this.mMaster = mMaster;
 	}
 	
+	// 회원가입 dto
+	@Override
+	public String toString() {
+		return "MemberDto [mId=" + mId + ", mPw=" + mPw + ", mName=" + mName + ", mGender=" + mGender + ", mPhone=" + mPhone + ", mBirth=" + mBirth + ", mEmail="
+				+ mEmail + ", mAddr=" + mAddr + "]";
+	}
+	
+	public String login() {
+		return "MemberDto[mId=" + mId + ", mPw=" + mPw + "]";
+	}
 	
 }
 
