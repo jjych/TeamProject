@@ -128,14 +128,24 @@ public class MyController {
 	}
 	
 	// 남성랭킹 페이지
-	@RequestMapping("/ManRanking")
-	public String ManRanking() {
+	@RequestMapping(value = "/ManRanking", method = RequestMethod.GET)
+	public String ManRanking(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList", list);
+		
 		return "Ranking/ManRanking";
 	}
 	
 	// 여성랭킹 페이지
-	@RequestMapping("/WomanRanking")
-	public String WomanRanking() {
+	@RequestMapping(value = "/WomanRanking", method = RequestMethod.GET)
+	public String WomanRanking(Model model) throws Exception {
+		
+		List<ProductDto> list = service.productList();
+		
+		model.addAttribute("productList", list);
+		
 		return "Ranking/WomanRanking";
 	}
 	
